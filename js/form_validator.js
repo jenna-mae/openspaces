@@ -50,7 +50,6 @@ const Validator = function (elementId) {
             fieldSet.classList.add("error");
         }
     }
-
     
     validator.confirmPassword.addEventListener("keyup", function (e) {   
         // compare the password and the confirm password.
