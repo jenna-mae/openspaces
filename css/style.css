@@ -1,0 +1,13 @@
+#registerPage form .error .errorMsg {
+  display: block;
+  color: hotpink;
+}
+
+#registerPage form .errorMsg {
+  display: none;
+}
+
+#registerPage form .unmatched {
+  background-color: hotpink;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,97 @@
+const Validator = function (elementId) {
+    const validator = this;
+    validator.form = document.getElementById(elementId);
+    validator.requiredFields = validator.form.querySelectorAll(".required");
+    validator.password = document.getElementById("password");
+    validator.confirmPassword = document.getElementById("confirmPassword");
+
+    //The validator works for only email, text and password this time.
+
+    validator.validateForm = function () {
+        validator.requiredFields.forEach(function (fieldSet) {
+
+            let textField = fieldSet.querySelector("input[type='text'], input[type = 'email'], input[type = 'password'], select, textarea");
+            //collect required fields except radio button fields
+
+            let radioFields = fieldSet.querySelectorAll("input[type='radio']");
+            //collect required radio button fields
+
+            if (textField) {
+                validator.checkTextField(fieldSet, textField);
+            } else if (radioFields) {
+                validator.checkRadioFields(fieldSet, radioFields);
+            }
+            //If required fields are found, activate each checking function.
+
+        })
+    }
+
+    validator.checkTextField = function (fieldSet, textField) {
+        //If required fields (except radio) are blank, add class name "error", else remove "error"
+        if (textField.value == "") {
+            fieldSet.classList.add("error");
+        } else {
+            fieldSet.classList.remove("error");
+        }
+    }
+
+    validator.checkRadioFields = function (fieldSet, radioFields) {
+        //If a required radio button is not checked, add class name "error", else remove it
+        let oneChecked = false;
+        fieldSet.classList.remove("error");
+
+        radioFields.forEach(function (oneRadioField) {
+            if (oneRadioField.checked) {
+                oneChecked = true;
+            }
+        })
+
+        if (!oneChecked) {
+            fieldSet.classList.add("error");
+        }
+    }
+
+    
+    validator.confirmPassword.addEventListener("keyup", function (e) {   
+        // compare the password and the confirm password.
+        // if the passwords are unmatched, add class name "unmatched", else remove it
+        let password = validator.password.value;
+        let confirmPassword = validator.confirmPassword.value;
+
+        console.log(password);
+        console.log(confirmPassword);
+
+        if ((password != confirmPassword) || (password == "")) {
+            validator.password.classList.add("unmatched");
+            validator.confirmPassword.classList.add("unmatched");
+
+        } else {
+            validator.password.classList.remove("unmatched");
+            validator.confirmPassword.classList.remove("unmatched");
+        }
+    })
+
+    validator.form.addEventListener("submit", function (e) {
+        //when the submit button is clicked, the validation starts
+        validator.validateForm();
+
+        let isError = validator.form.querySelector(".error");
+        let isUnmatched = validator.form.querySelector(".unmatched");
+
+        if (isError || isUnmatched) {
+            e.preventDefault();
+        } else {
+            checkSubmit();
+        }
+    })
+}
+
+new Validator("form");
+
+
+function checkSubmit() {
+    return confirm("Submit the form?");
+}
+
+
+
