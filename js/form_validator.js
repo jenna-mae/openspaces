@@ -5,7 +5,6 @@ const Validator = function (elementId) {
     validator.password = document.getElementById("password");
     validator.confirmPassword = document.getElementById("confirmPassword");
 
-    //The validator works for only email, text and password this time.
 
     validator.validateForm = function () {
         validator.requiredFields.forEach(function (fieldSet) {
@@ -20,9 +19,8 @@ const Validator = function (elementId) {
                 validator.checkTextField(fieldSet, textField);
             } else if (radioFields) {
                 validator.checkRadioFields(fieldSet, radioFields);
-            }
+            } 
             //If required fields are found, activate each checking function.
-
         })
     }
 
@@ -51,24 +49,24 @@ const Validator = function (elementId) {
         }
     }
     
-    validator.confirmPassword.addEventListener("keyup", function (e) {   
-        // compare the password and the confirm password.
-        // if the passwords are unmatched, add class name "unmatched", else remove it
-        let password = validator.password.value;
-        let confirmPassword = validator.confirmPassword.value;
+    if (validator.confirmPassword){
+        //If there is a confirm password field, start check
+        validator.confirmPassword.addEventListener("keyup", function (e) {
+            // compare the password and the confirm password.
+            // if the passwords are unmatched, add class name "unmatched", else remove it
+            let password = validator.password.value;
+            let confirmPassword = validator.confirmPassword.value;
 
-        console.log(password);
-        console.log(confirmPassword);
+            if ((password != confirmPassword) || (password == "")) {
+                validator.password.classList.add("unmatched");
+                validator.confirmPassword.classList.add("unmatched");
 
-        if ((password != confirmPassword) || (password == "")) {
-            validator.password.classList.add("unmatched");
-            validator.confirmPassword.classList.add("unmatched");
-
-        } else {
-            validator.password.classList.remove("unmatched");
-            validator.confirmPassword.classList.remove("unmatched");
-        }
-    })
+            } else {
+                validator.password.classList.remove("unmatched");
+                validator.confirmPassword.classList.remove("unmatched");
+            }
+        })
+    }
 
     validator.form.addEventListener("submit", function (e) {
         //when the submit button is clicked, the validation starts
@@ -80,7 +78,7 @@ const Validator = function (elementId) {
         if (isError || isUnmatched) {
             e.preventDefault();
         } else {
-            checkSubmit();
+            checkSubmit(); //checkSubmit function is written in each page file to show a spacific message
         }
     })
 }
@@ -88,9 +86,7 @@ const Validator = function (elementId) {
 new Validator("form");
 
 
-function checkSubmit() {
-    return confirm("Submit the form?");
-}
+
 
 
 

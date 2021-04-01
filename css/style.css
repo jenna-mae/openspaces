@@ -10,4 +10,17 @@
 #registerPage form .unmatched {
   background-color: hotpink;
 }
+
+#spaceForm form .error .errorMsg {
+  display: block;
+  color: hotpink;
+}
+
+#spaceForm form .errorMsg {
+  display: none;
+}
+
+#spaceForm form .unmatched {
+  background-color: hotpink;
+}
 /*# sourceMappingURL=style.css.map */

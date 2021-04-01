@@ -14,3 +14,20 @@
         }
     }
 }
+
+#spaceForm {
+    form {
+        .error {
+            .errorMsg {
+                display: block;
+                color: hotpink;
+            }
+        }
+        .errorMsg {
+            display: none;
+        }
+        .unmatched {
+            background-color: hotpink;
+        }
+    }
+}

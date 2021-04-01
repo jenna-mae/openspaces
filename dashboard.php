@@ -16,11 +16,31 @@ include("snippets/navLinks.php"); //snippets
 
         <article>
             <div>
+                <a href="form_space.php">Create a new space</a> <!-- Check the file name -->
+            </div>
+
+            <div>
                 <p>Default space here.</p>
             </div>
 
             <div>
                 <p>Space list here.</p>
+            </div>
+            
+            <div>
+                <form action="dashboard.php" method="get">
+                    <div class="fieldset">
+                        <label>Sort by category</label>
+                        <select name="sortByCategory" id="sortByCategory">
+                            <option value="">- Select -</option>
+                            <option value="Option 1">Option 1</option>
+                            <option value="Option 2">Option 2</option>
+                            <option value="Option 3">Option 3</option>
+                            <option value="Option 4">Option 4</option>
+                            <option value="Option 5">Option 5</option>
+                        </select>
+                    </div>
+                </form>
             </div>
         </article>
         

@@ -24,20 +24,22 @@ include("snippets/header.php"); //snippets
         // }
         ?> -->
 
-        <form id="form" method="post" action="processLogin.php"> <!-- Check the file name -->
-            <div class="fieldset">
-                <label>User Name</label>
-                <input type="text" name="userName"/>
-            </div>
-            <div class="fieldset">
-                <label>Password</label>
-                <input type="password" name="password"/>
-            </div>
-            <div class="fieldset submit">
-                <input type="submit" value="Login Now" class="btn-1"/>
-            </div>
-        </form>
-        <p>Don't Have An Account? <a href="register.php">Register now</a></p> <!-- Check the file name -->       
+        <article>
+            <form id="form" method="post" action="processLogin.php"> <!-- Check the file name -->
+                <div class="fieldset">
+                    <label>User Name</label>
+                    <input type="text" name="userName"/>
+                </div>
+                <div class="fieldset">
+                    <label>Password</label>
+                    <input type="password" name="password"/>
+                </div>
+                <div class="fieldset submit">
+                    <input type="submit" value="Login Now" class="btn-1"/>
+                </div>
+            </form>
+            <p>Don't Have An Account? <a href="register.php">Register now</a></p> <!-- Check the file name -->
+        </article>   
 
     </div>
 </section>
