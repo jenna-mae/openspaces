@@ -1,6 +1,12 @@
 <?php
 // include("libs/functions.php"); //the file to connect to database and use the  php functions
 
+session_start(); // start session for current user
+include("classes/Db.php"); // class contains database connection, query functions, etc
+include("classes/User.php"); // class contains functions to do with the User
+$oUser = new User(); // Create instance of User Object
+$loggedUser = $oUser->checkLogin(); // $loggedUser contains all user details from database(id, username, email, etc)
+
 $title = "Dashboard"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "dashboard"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets

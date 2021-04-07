@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include("classes/Db.php");
 include("classes/User.php");

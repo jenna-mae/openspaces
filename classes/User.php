@@ -1,7 +1,5 @@
 <?php
 
-// TO DO : complete checkLogin()
-
 class User {
     public function register($email, $firstName, $lastName, $username, $encPass, $birthday, $gender) {
         $oDb = new Db;
@@ -22,15 +20,12 @@ class User {
             $encPass = $user["password"];
             $providedPass = $password;
             if(password_verify($providedPass, $encPass)) {
-                // echo "password verified";
                 $_SESSION["id"] = $user["id"];
                 header("location: dashboard.php");
             } else {
-                // echo "password error";
                 header("location: index.php?error");
             }
         } else {
-            // echo "login did not work..";
             header("location: index.php?error");
         }
     }
@@ -39,10 +34,8 @@ class User {
         $oDb = new Db;
         $check = $oDb->getSingleEntry("SELECT * FROM users WHERE $dbField='".$value."'");
         if($check) {
-            // echo "already exists";
             return $check;
         } else {
-            // echo "good to go";
             return null;
         }
     }
@@ -52,10 +45,8 @@ class User {
         $user = $oDb->getSingleEntry("SELECT * FROM users WHERE id='".$_SESSION["id"]."'");
         if($user) {
             return $user;
-            echo ($_SESSION["id"]);
         } else {
-            echo ($_SESSION["id"]);
-            //header("location: index.php");
+            header("location: index.php?error");
         }
     }
 }
