@@ -7,10 +7,12 @@
 // JENNA - TODO - complete register()...
 
 class User {
-    public function register($email, $username, $password) {
+    public function register($email, $firstName, $lastName, $username, $password, $birthday, $gender) {
         $oDb = new Db;
-        $oDb->doQuery("INSERT INTO users (email, username, password) VALUES ('".$email."', '".$username."', '".$password."')");
+        $oDb->doQuery("INSERT INTO users (email, firstName, lastName, username, password) VALUES ('".$email."', '".$firstName."', '".$lastName."', '".$username."', '".$password."', '".$birthday."', '".$gender."')");
         $user = $oDb->getSingleEntry("SELECT * FROM users WHERE username='".$username."'");
+        $_SESSION["id"] = $user["id"];
+        //header("location: dashboard.php");
     }
 
     public function login($username, $password) {
@@ -26,8 +28,15 @@ class User {
         }
     }
 
-    private function checkExists() {
+    public function checkExists($dbField, $value) {
+        $oDb = new Db;
+        $check = $oDb->getSingleEntry("SELECT * FROM users WHERE $dbField='".$value."'");
 
+        if($check) {
+            echo "already exists";
+        } else {
+            echo "good to go";
+        }
     }
 }
 
