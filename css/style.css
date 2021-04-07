@@ -133,6 +133,7 @@ form input[type="text"], form input[type="email"], form input[type="password"], 
   border: none;
   padding: 0.8rem 0.5rem;
   font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 form input[type="radio"] {

@@ -76,7 +76,7 @@ include("snippets/header.php"); //snippets
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Birthday (YYYY//MM/DD)</label>
+                    <label>Birthday (YYYY/MM/DD)</label>
                     <input type="text" name="birthday" id="birthday"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
