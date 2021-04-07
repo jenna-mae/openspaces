@@ -6,11 +6,17 @@ $bodyId = "loginPage"; //The ID name given to the html body of each page for CSS
 include("snippets/header.php"); //snippets
 ?>
 
-<section>
+<header class="headerLogo">
     <div class="handle">
+        <img src="imgs/OpenspacelogoColor.png" alt="Open space Logo"/>
+    </div>
+</header>
 
-        <header>        
-            <h1>Login to OpenSpace</h1>
+<section class="registerForm">
+    <div class="handle">
+        <header>
+            <h1>Login</h1>
+            <p>Please fill out your personal details and we’ll get you on your way!</p>
         </header>
 
         <!-- error message with php -->
@@ -27,8 +33,8 @@ include("snippets/header.php"); //snippets
         <article>
             <form id="form" method="post" action="processLogin.php"> <!-- Check the file name -->
                 <div class="fieldset">
-                    <label>User Name</label>
-                    <input type="text" name="userName"/>
+                    <label>Username</label>
+                    <input type="text" name="username"/>
                 </div>
                 <div class="fieldset">
                     <label>Password</label>
@@ -36,9 +42,11 @@ include("snippets/header.php"); //snippets
                 </div>
                 <div class="fieldset submit">
                     <input type="submit" value="Login Now" class="btn-1"/>
-                </div>
+                </div>            
             </form>
-            <p>Don't Have An Account? <a href="register.php">Register now</a></p> <!-- Check the file name -->
+            <div class="notice">
+                <p><span>New Here?</span> Let's get you <a href="register.php">Registered </a></p> <!-- Check the file name -->
+            </div>               
         </article>   
 
     </div>

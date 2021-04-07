@@ -1,33 +1,257 @@
-#registerPage {
-    form {
-        .error {
-            .errorMsg {
-                display: block;
-                color: hotpink;
-            }
-        }
+@import "variables"; //refer to "_variables.scss" file
+
+// Common elements ---
+* {
+    box-sizing: border-box;
+}
+
+html { 
+    font-family: $font_1;
+    font-size: $fontSize_mb; 
+}
+
+body { 
+    background-color: $color_5;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 { font-family: $font_2; }
+
+h1 { 
+    font-size: $fontSize_h1; 
+    margin-bottom: $marginBottom_h1;
+    color: $color_3;
+}
+
+h2 { 
+    font-size: $fontSize_h2; 
+    margin-bottom: $marginBottom_h2;    
+}
+
+h3 { 
+    font-size: $fontSize_h3; 
+    margin-bottom: $marginBottom_h3;
+}
+
+h4 { 
+    font-size: $fontSize_h4; 
+    margin-bottom: $marginBottom_h4;
+}
+
+h5 { 
+    font-size: $fontSize_h5; 
+    margin-bottom: $marginBottom_h5;
+}
+
+.handle {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+@media screen and (max-width: $width_mb) {  
+	.hide-s { display: none!important; }
+}
+
+@media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+    .hide-m { display: none!important; }
+    .handle { width: 80%; } 
+}
+
+@media screen and (min-width: $width_pc) {  
+    .hide-l { display: none!important; }
+    .handle { width: 80%; } 
+}
+
+@media screen and (min-width: 601px) { 
+	html { font-size: $fontSize_pc; } 
+}
+
+@media only screen and (max-height: 800px) and (max-width: 1100px) {  
+	html { font-size: $fontSize_mb; } 
+}
+
+[class*="btn-"] {
+	text-decoration: none;
+    outline: none;
+    border-style: none;
+    display: inline-block;
+    font-family: $font_2;
+	font-size: 1.1rem;
+    padding: 0.7rem 1.8rem;
+	color: $white;
+	transition: $transition_hover; 
+}
+
+.btn-1 { background-color: $color_1; }
+.btn-1:hover { background-color: $color_3; }
+
+form {
+    label {
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+    span {
+        color: $color_6;
+    }
+    .fieldset {
+        margin-bottom: 5vh;
+        width: 100%;
+    }
+    input {
+        vertical-align: middle;
+    }
+    input[type="text"], input[type="email"], input[type="password"], select, textarea {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0.8rem 0.5rem;
+        font-size: 1rem;
+    }
+    input[type="radio"] {
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+    .option {
+        margin-bottom: 0.8rem;
+    }
+    select { 
+        cursor: pointer;
+    }
+    textarea {
+        line-height: 1.4rem;	
+        max-height: 15vh;
+        min-height: 15vh;
+        max-width: 100%;
+        min-width: 100%; 
+    }
+    input:focus {
+        border: 2px solid $color_4;
+        outline: 0;
+    }
+    select:focus {
+        border: 2px solid $color_4;
+        outline: 0;
+    }
+    textarea:focus {
+        border: 2px solid $color_4;
+        outline: 0;
+    }
+    .submit {
+        text-align: right;
+    }
+    .error {
         .errorMsg {
-            display: none;
+            display: block;
+            color: $color_6;
+            margin-top: 0.8vh;
         }
-        .unmatched {
-            background-color: hotpink;
+        input[type="text"] {
+            border: 2px solid $color_6;
+        }
+        input[type="email"] {
+            border: 2px solid $color_6;
+        }
+        input[type="password"] {
+            border: 2px solid $color_6;
+        }
+        select {
+            border: 2px solid $color_6;
+        }        
+    }
+    .errorMsg {
+        display: none;
+    }
+    .unmatched {
+        background-color: $color_6;
+    }
+}
+
+@media only screen and (min-width: 801px) {
+    form {
+        display: flex;
+        flex-wrap: wrap;
+        .fieldset {
+            padding: 0 0.5vw;
+        }
+        .half {
+            width: 50%;
+        }
+        .radioOptions {
+            display: flex;
+        }
+        .option {
+            display: inline-block;
+            width: 33.33%;
+            margin-bottom: 0;
+        }	
+    }
+}
+
+.footer {
+    padding: 10vh 0 3vh 0;
+    .copyright {
+        font-family: $font_2;
+        font-size: .9rem;
+    }
+}
+
+// --- Common elements
+
+
+// Login & Register ---
+
+#registerPage, #loginPage {
+    .handle {
+        max-width: 900px;
+    }
+
+}
+
+.headerLogo {
+    margin: 5vh 0;
+    text-align: center;
+    @media screen and (min-width: $width_pc) {  
+        text-align: right;
+    }
+    img {
+        width: 40vw;
+        @media screen and (min-width: $width_pc) {  
+            width: 15vw;
         }
     }
 }
 
-#spaceForm {
-    form {
-        .error {
-            .errorMsg {
-                display: block;
-                color: hotpink;
-            }
+.registerForm {
+    header {
+        margin-bottom: 5vh;
+    }
+    .notice {
+        span {
+            font-family: $font_2;
+            color: $color_3;
+            font-size: 1.4rem;
+            font-weight: bold;
         }
-        .errorMsg {
-            display: none;
+        a {
+            font-family: $font_2;
+            color: $color_1;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
-        .unmatched {
-            background-color: hotpink;
+        a:hover {
+            color: $color_3;
         }
     }
 }
+
+// --- Login & Register 
+
+
+
+

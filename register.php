@@ -6,11 +6,17 @@ $bodyId = "registerPage"; //The ID name given to the html body of each page for 
 include("snippets/header.php"); //snippets
 ?>
 
-<section>
+<header class="headerLogo">
+    <div class="handle">
+        <img src="imgs/OpenspacelogoColor.png" alt="Open space Logo"/>
+    </div>
+</header>
+
+<section class="registerForm">
     <div class="handle">
         <header>
-            <h1>Register for OpenSpace account</h1>
-            <p>Please fill in the form below to create your account.</p>
+            <h1>Looking to register?</h1>
+            <p>Please fill out our registration form and we’ll get you on your way!</p>
         </header>
 
 
@@ -34,21 +40,35 @@ include("snippets/header.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>
-                <div class="fieldset required">
-                    <label>User Name</label>
-                    <input type="text" name="userName" id="userName"/>
+                <div class="fieldset required half">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" id="firstName"/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
+                </div>
+                <div class="fieldset required half">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" id="lastName"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required">
+                    <label>Username</label>
+                    <input type="text" name="username" id="username"/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
+                </div>
+                <div class="fieldset required half">
                     <label>Password</label>
                     <input type="password" name="password" id="password"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
-                <div class="fieldset required">
+                <div class="fieldset required half">
                     <label>Confirm Password</label>
                     <input type="password" name="confirmPassword" id="confirmPassword"/>
                     <div class="errorMsg">
@@ -59,7 +79,9 @@ include("snippets/header.php"); //snippets
                     <input type="submit" value="Register Now" class="btn-1"/>
                 </div>
             </form>
-            <p>Already Registered? <a href="index.php">Login now</a></p> <!-- Check the file name -->
+            <div class="notice">
+                <p><span>Already Registered?</span> Head back to <a href="index.php">Login </a></p> <!-- Check the file name -->
+            </div>            
         </article>
     </div>
 </section>

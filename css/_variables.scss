@@ -1,0 +1,35 @@
+// This file contains the variables for CSS.
+
+$color_1: #c09a85;
+$color_2: #7f9593;
+$color_3: #1f4045;
+$color_4: #c9c1b4;
+$color_5: #f8f3f0;
+$color_6: #ff6347;
+$white: #ffffff;
+$black: #000000;
+
+//for mediaquery
+$width_mb: 480px;
+$width_pc: 800px;
+
+
+$font_1: 'Montserrat', sans-serif; //Body font
+$font_2: 'Quattrocento', serif; //Header font
+
+$fontSize_pc: 100%;
+$fontSize_mb: 90%;
+$fontSize_h1: 2.6rem;
+$fontSize_h2: 2.2rem;
+$fontSize_h3: 1.8rem;
+$fontSize_h4: 1.5rem;
+$fontSize_h5: 1.2rem;
+
+$marginBottom_h1: 2.5vh;
+$marginBottom_h2: 2vh;
+$marginBottom_h3: 2vh;
+$marginBottom_h4: 2vh;
+$marginBottom_h5: 2vh;
+
+$transition_hover: all .1s linear;
+
