@@ -18,7 +18,7 @@ $checkUsername = $oUser->checkExists("username", $username);
 if(!$checkEmail&&!$checkUsername) {
     $oUser->register($email, $firstName, $lastName, $username, $password, $birthday, $gender);
 } else {
-    header("location: register.php")
+    header("location: register.php");
 }
 
 ?>

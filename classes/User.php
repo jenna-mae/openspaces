@@ -20,11 +20,11 @@ class User {
         $user = $oDb->getSingleEntry("SELECT * FROM users WHERE username='".$username."' AND password='".$password."'");
         if($user) {
             $_SESSION["id"] = $user["id"];
-            echo "yay it worked";
-            // header("location: dashboard.php");
+            // echo "yay it worked";
+            header("location: dashboard.php");
         } else {
-            echo "did not work..";
-            // header("location: index.php?error=1");
+            // echo "did not work..";
+            header("location: index.php?error");
         }
     }
 
