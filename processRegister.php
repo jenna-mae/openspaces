@@ -15,8 +15,10 @@ $oUser = new User();
 $checkEmail = $oUser->checkExists("email", $email);
 $checkUsername = $oUser->checkExists("username", $username);
 
-if($checkEmail&&$checkUsername) {
+if(!$checkEmail&&!$checkUsername) {
     $oUser->register($email, $firstName, $lastName, $username, $password, $birthday, $gender);
+} else {
+    header("location: register.php")
 }
 
 ?>
