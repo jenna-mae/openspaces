@@ -7,8 +7,12 @@ class User {
         $oDb = new Db;
         $oDb->doQuery("INSERT INTO users (email, firstName, lastName, username, password, birthday, gender) VALUES ('".$email."', '".$firstName."', '".$lastName."', '".$username."', '".$encPass."', '".$birthday."', '".$gender."')");
         $user = $oDb->getSingleEntry("SELECT * FROM users WHERE username='".$username."'");
-        $_SESSION["id"] = $user["id"];
-        header("location: dashboard.php");
+        if($user) {
+            $_SESSION["id"] = $user["id"];
+            header("location: dashboard.php");
+        } else {
+            header("location: register.php?error");
+        }
     }
 
     public function login($username, $password) {
