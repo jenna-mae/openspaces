@@ -75,6 +75,26 @@ include("snippets/header.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>
+                <div class="fieldset required half">
+                    <label>Birthday (MM/DD/YYYY)</label>
+                    <input type="text" name="birthday" id="birthday"/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
+                </div>
+                <div class="fieldset required half">
+                    <label>Gender</label>
+                        <select name="gender" id="gender">
+                        <option value="">- Select -</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                        <option value="NA">NA</option>
+                    </select>
+                    <div class="errorMsg">
+                        <p>Please select one.</p>
+                    </div>
+                </div>
                 <div class="fieldset submit">
                     <input type="submit" value="Register Now" class="btn-1"/>
                 </div>
