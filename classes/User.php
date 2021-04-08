@@ -46,7 +46,7 @@ class User {
         if($user) {
             return $user;
         } else {
-            header("location: index.php?error");
+            header("location: index.php");
         }
     }
 }
