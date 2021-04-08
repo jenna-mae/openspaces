@@ -23,6 +23,14 @@
   }
 }
 
+.loginErrorMsg {
+  margin-bottom: 5vh;
+  color: #ff6347;
+  font-family: "Quattrocento", serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
 .registerForm header {
   margin-bottom: 5vh;
 }

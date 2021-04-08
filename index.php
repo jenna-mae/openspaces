@@ -20,15 +20,15 @@ include("snippets/header.php"); //snippets
         </header>
 
         <!-- error message with php -->
-        <!-- <?php
-        // if(isset($_GET["error"])){
-        //     ?>
-        //     <div class="errorMsg">
-        //         <p>ERROR: Check your user name and password.</p>
-        //     </div>
-        //     <?php
-        // }
-        ?> -->
+        <?php
+        if(isset($_GET["error"])){
+            ?>
+            <div class="loginErrorMsg">
+                <p>ERROR: Username or Password is incorrect.</p>
+            </div>
+            <?php
+        }
+        ?>
 
         <article>
             <form id="form" method="post" action="processLogin.php"> <!-- Check the file name -->

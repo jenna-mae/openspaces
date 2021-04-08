@@ -21,15 +21,15 @@ include("snippets/header.php"); //snippets
 
 
         <!-- error message with php -->
-        <!-- <?php
-        // if(isset($_GET["error"])){
-        //     ?>
-        //     <div class="errorMsg">
-        //         <p>The email address already exists</p>
-        //     </div>
-        //     <?php
-        // }
-        ?> -->
+        <?php
+        if(isset($_GET["error"])){
+            ?>
+            <div class="loginErrorMsg">
+                <p>ERROR: Username or Email already exists.</p>
+            </div>
+            <?php
+        }
+        ?>
 
         <article>
             <form id="form" method="post" action="processRegister.php"> <!-- Check the file name -->
