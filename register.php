@@ -34,61 +34,61 @@ include("snippets/header.php"); //snippets
         <article>
             <form id="form" method="post" action="processRegister.php"> <!-- Check the file name -->
                 <div class="fieldset required">
-                    <label>Email Address</label>
+                    <label>Email Address:</label>
                     <input type="email" name="email" id="email"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>First Name</label>
+                    <label>First Name:</label>
                     <input type="text" name="firstName" id="firstName"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Last Name</label>
+                    <label>Last Name:</label>
                     <input type="text" name="lastName" id="lastName"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required">
-                    <label>Username</label>
+                    <label>Username:</label>
                     <input type="text" name="username" id="username"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Password</label>
+                    <label>Password:</label>
                     <input type="password" name="password" id="password"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Confirm Password</label>
+                    <label>Confirm Password:</label>
                     <input type="password" name="confirmPassword" id="confirmPassword"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Birthday (YYYY/MM/DD)</label>
+                    <label>Birthday (YYYY/MM/DD):</label>
                     <input type="text" name="birthday" id="birthday"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
-                    <label>Gender</label>
+                    <label>Gender:</label>
                         <select name="gender" id="gender">
                         <option value="">- Select -</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                        <option value="Other">Non-binary</option>
+                        <option value="Other">Non-Binary</option>
                         <option value="NA">Other</option>
                     </select>
                     <div class="errorMsg">

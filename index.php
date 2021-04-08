@@ -33,11 +33,11 @@ include("snippets/header.php"); //snippets
         <article>
             <form id="form" method="post" action="processLogin.php"> <!-- Check the file name -->
                 <div class="fieldset">
-                    <label>Username</label>
+                    <label>Username:</label>
                     <input type="text" name="username"/>
                 </div>
                 <div class="fieldset">
-                    <label>Password</label>
+                    <label>Password:</label>
                     <input type="password" name="password"/>
                 </div>
                 <div class="fieldset submit">
