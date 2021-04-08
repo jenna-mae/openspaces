@@ -3,8 +3,8 @@
 }
 
 .headerLogo {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 6vh;
+  margin-bottom: 7vh;
   text-align: center;
 }
 
@@ -16,6 +16,7 @@
 
 .headerLogo img {
   width: 40vw;
+  max-width: 200px;
 }
 
 @media screen and (min-width: 960px) {

@@ -14,13 +14,14 @@
 
 .headerLogo {
     margin-top: $margin_page;
-    margin-bottom: 5vh;
+    margin-bottom: 7vh;
     text-align: center;
     @media screen and (min-width: $width_pc) {  
         text-align: right;
     }
     img {
         width: 40vw;
+        max-width: 200px;
         @media screen and (min-width: $width_pc) {  
             width: 15vw;
         }
