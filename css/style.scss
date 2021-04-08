@@ -13,7 +13,8 @@
 }
 
 .headerLogo {
-    margin: 5vh 0;
+    margin-top: $margin_page;
+    margin-bottom: 5vh;
     text-align: center;
     @media screen and (min-width: $width_pc) {  
         text-align: right;

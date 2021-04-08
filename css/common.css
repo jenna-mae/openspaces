@@ -238,7 +238,8 @@ form .unmatched {
 }
 
 .footer {
-  padding: 10vh 0 3vh 0;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
 
 .footer .copyright {

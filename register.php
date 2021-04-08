@@ -34,7 +34,7 @@ include("snippets/header.php"); //snippets
         <article>
             <form id="form" method="post" action="processRegister.php"> <!-- Check the file name -->
                 <div class="fieldset required">
-                    <label>Emai Address</label>
+                    <label>Email Address</label>
                     <input type="email" name="email" id="email"/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
@@ -88,8 +88,8 @@ include("snippets/header.php"); //snippets
                         <option value="">- Select -</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                        <option value="NA">NA</option>
+                        <option value="Other">Non-binary</option>
+                        <option value="NA">Other</option>
                     </select>
                     <div class="errorMsg">
                         <p>Please select one.</p>

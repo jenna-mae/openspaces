@@ -197,7 +197,8 @@ form {
 }
 
 .footer {
-    padding: 10vh 0 3vh 0;
+    padding-top: 10vh;
+    padding-bottom: $margin_page;
     .copyright {
         font-family: $font_2;
         font-size: .9rem;
