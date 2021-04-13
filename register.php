@@ -1,6 +1,4 @@
 <?php
-// include("libs/functions.php"); //the file to connect to database and use the  php functions
-
 $title = "Register Page"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "registerPage"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
@@ -107,15 +105,6 @@ include("snippets/header.php"); //snippets
 </section>
 
 <script type="text/javascript" src="js/form_validator.js"></script>
-<!-- Create error indication with CSS later -->
-<script>
-    function checkSubmit() {
-        return confirm("Register for OpenSpace?");
-    }
-</script>
-
-
-
 
 <?php
 include("snippets/footer.php");
