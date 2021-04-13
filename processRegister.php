@@ -16,7 +16,7 @@ $oUser = new User();
 $checkEmail = $oUser->checkExists("email", $email);
 $checkUsername = $oUser->checkExists("username", $username);
 
-echo ($checkUsername);
+// echo ($checkUsername);
 
 if($checkEmail||$checkUsername) {
     header("location: register.php?error");

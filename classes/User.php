@@ -17,6 +17,7 @@ class User {
         $oDb = new Db;
         $user = $oDb->getSingleEntry("SELECT * FROM users WHERE username='".$username."'");
         if($user) {
+            echo "good to go";
             $encPass = $user["password"];
             $providedPass = $password;
             if(password_verify($providedPass, $encPass)) {

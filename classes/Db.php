@@ -12,20 +12,18 @@ class Db {
     
     public function doQuery($sql) {
         $con = $this->connect();
-        $result = mysqli_query($con, $sql);
-        return $result;
+        $query = mysqli_query($con, $sql);
+        return $query;
     }
     
     public function getSingleEntry($sql) {
-        $con = $this->connect();
-        $result = mysqli_query($con, $sql);
+        $result = $this->doQuery($sql);
         $getResult = mysqli_fetch_assoc($result);
         return $getResult;
     }
     
     public function getAllEntries($sql) {
-        $con = $this->connect();
-        $result = mysqli_query($con, $sql);
+        $result = $this->doQuery($sql);
         $data = array();
         while($getResult = mysqli_fetch_assoc($result)) {
             $data[] = $getResult;
