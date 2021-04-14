@@ -1,6 +1,4 @@
 <?php
-// include("libs/functions.php"); //the file to connect to database and use the  php functions
-
 $title = "Login Page"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "loginPage"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets

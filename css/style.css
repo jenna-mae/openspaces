@@ -2,30 +2,30 @@
   max-width: 900px;
 }
 
-.headerLogo {
+#registerPage .headerLogo, #loginPage .headerLogo {
   margin-top: 6vh;
   margin-bottom: 7vh;
   text-align: center;
 }
 
 @media screen and (min-width: 960px) {
-  .headerLogo {
+  #registerPage .headerLogo, #loginPage .headerLogo {
     text-align: right;
   }
 }
 
-.headerLogo img {
+#registerPage .headerLogo img, #loginPage .headerLogo img {
   width: 40vw;
   max-width: 200px;
 }
 
 @media screen and (min-width: 960px) {
-  .headerLogo img {
+  #registerPage .headerLogo img, #loginPage .headerLogo img {
     width: 15vw;
   }
 }
 
-.loginErrorMsg {
+#registerPage .loginErrorMsg, #loginPage .loginErrorMsg {
   margin-bottom: 5vh;
   color: #ff6347;
   font-family: "Quattrocento", serif;
@@ -33,25 +33,25 @@
   font-weight: bold;
 }
 
-.registerForm header {
+#registerPage .registerForm header, #loginPage .registerForm header {
   margin-bottom: 5vh;
 }
 
-.registerForm .notice span {
+#registerPage .registerForm .notice span, #loginPage .registerForm .notice span {
   font-family: "Quattrocento", serif;
   color: #1f4045;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-.registerForm .notice a {
+#registerPage .registerForm .notice a, #loginPage .registerForm .notice a {
   font-family: "Quattrocento", serif;
   color: #c09a85;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.registerForm .notice a:hover {
+#registerPage .registerForm .notice a:hover, #loginPage .registerForm .notice a:hover {
   color: #1f4045;
 }
 /*# sourceMappingURL=style.css.map */

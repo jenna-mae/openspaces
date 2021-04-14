@@ -1,6 +1,4 @@
 <?php
-// include("libs/functions.php"); //the file to connect to database and use the  php functions
-
 session_start(); // start session for current user
 include("classes/Db.php"); // class contains database connection, query functions, etc
 include("classes/User.php"); // class contains functions to do with the User
@@ -16,38 +14,28 @@ include("snippets/navLinks.php"); //snippets
 
 <section>
     <div class="handle">
-        <header>
-            <h1>Dashboard</h1>
-        </header>
+        <form action="dashboard.php" method="get" class="selectCategory">
+            <div class="fieldset">
+                <select name="sortByCategory" id="sortByCategory">
+                    <option value="">- Sort by category -</option>
+                    <option value="Recently Added">Recently Added</option>
+                    <option value="Hangout">Hangout</option>
+                    <option value="Art">Art</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Books">Books</option>
+                    <option value="Games">Games</option>
+                    <option value="Ted Talk">Ted Talk</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </form>
 
         <article>
             <div>
                 <a href="form_space.php">Create a new space</a> <!-- Check the file name -->
             </div>
+          
 
-            <div>
-                <p>Default space here.</p>
-            </div>
-
-            <div>
-                <p>Space list here.</p>
-            </div>
-            
-            <div>
-                <form action="dashboard.php" method="get">
-                    <div class="fieldset">
-                        <label>Sort by category</label>
-                        <select name="sortByCategory" id="sortByCategory">
-                            <option value="">- Select -</option>
-                            <option value="Option 1">Option 1</option>
-                            <option value="Option 2">Option 2</option>
-                            <option value="Option 3">Option 3</option>
-                            <option value="Option 4">Option 4</option>
-                            <option value="Option 5">Option 5</option>
-                        </select>
-                    </div>
-                </form>
-            </div>
         </article>
         
     </div>
