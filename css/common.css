@@ -247,30 +247,65 @@ form .unmatched {
   }
 }
 
-.header {
+.headerLogo {
   margin-top: 6vh;
   margin-bottom: 5vh;
   text-align: center;
 }
 
-.header .headerLogo {
-  margin-bottom: 3vh;
-}
-
-.header .headerLogo img {
+.headerLogo img {
   width: 15rem;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 960px) {
-  .header .headerLogo img {
+  .headerLogo img {
     width: 22rem;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .header .headerLogo img {
+  .headerLogo img {
     width: 25rem;
   }
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+.naviBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #c09a85;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1.5rem 0;
+}
+
+.naviBar a {
+  display: block;
+  font-family: "Quattrocento", serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f4045;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.naviBar a svg {
+  width: 2rem;
+}
+
+.naviBar a:hover {
+  color: #ffffff;
 }
 
 .footer {

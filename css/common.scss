@@ -209,23 +209,58 @@ form {
 }
 
 
-.header {
+
+
+.headerLogo {
     margin-top: $margin_page;
     margin-bottom: 5vh;
     text-align: center;    
-    .headerLogo {
-        margin-bottom: 3vh;
-        img {
-            width: 15rem;
-            @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
-                width: 22rem; 
-            }
-            @media screen and (min-width: $width_pc) {  
-                width: 25rem; 
-            }
+    img {
+        width: 15rem;
+        @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+            width: 22rem; 
+        }
+        @media screen and (min-width: $width_pc) {  
+            width: 25rem; 
         }
     }
 }
+
+
+
+// Sticky Navi Bar ------
+
+html, body {
+    min-height: 100vh;
+}
+
+.naviBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color_1;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.5rem 0;
+    a {
+        display: block;
+        font-family: $font_2;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color_3;
+        transition: $transition_hover;
+        svg {
+            width: 2rem;
+        }
+    }
+    a:hover {
+        color: $white;
+    }
+}
+
+
+// ------ Sticky Navi Bar
 
 
 .footer {

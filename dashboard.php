@@ -8,11 +8,10 @@ $loggedUser = $oUser->checkLogin(); // $loggedUser contains all user details fro
 $title = "Dashboard"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "dashboard"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
-
-include("snippets/navLinks.php"); //snippets
+include("snippets/headerLogo.php"); //snippets
 ?>
 
-<section>
+<section id="dashboard" class="page defaultPage">
     <div class="handle">
         <form action="dashboard.php" method="get" class="selectCategory">
             <div class="fieldset">
@@ -34,6 +33,7 @@ include("snippets/navLinks.php"); //snippets
             <div>
                 <a href="form_space.php">Create a new space</a> <!-- Check the file name -->
             </div>
+
           
 
         </article>
@@ -44,5 +44,5 @@ include("snippets/navLinks.php"); //snippets
 
 
 <?php
-include("snippets/footer.php");
+include("snippets/naviBar.php"); //snippets
 ?>
