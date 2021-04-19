@@ -34,7 +34,7 @@ include("snippets/headerLogo.php"); //snippets
                     <input type="password" name="password"/>
                 </div>
                 <div class="fieldset submit">
-                    <input type="submit" value="Login Now" class="btn-1"/>
+                    <input type="submit" value="Submit" class="btn-1"/>
                 </div>            
             </form>
             <div class="notice">

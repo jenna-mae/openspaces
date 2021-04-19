@@ -6,9 +6,6 @@
 // Login & Register ---
 
 #registerPage, #loginPage {
-    .handle {
-        max-width: 900px;
-    }
     .headerLogo {
         margin-top: $margin_page;
         margin-bottom: 7vh;
@@ -33,7 +30,10 @@
     }
     .registerForm {
         header {
-            margin-bottom: 5vh;
+            margin-bottom: 8vh;
+            h1 {
+                margin-bottom: 3vh;
+            }
         }
         .notice {
             span {
@@ -56,4 +56,119 @@
 }
 
 // --- Login & Register
+
+// Dashboard ------
+
+#dashboard {
+    .createOwnSpace {
+        margin-bottom: 5vh;
+        .container {
+            background-color: $color_3;
+            text-align: center;
+            border-radius: $borderRadious_1;
+            padding: 2.5rem;
+            h2 {
+                color: $white;
+                margin-bottom: 3vh;
+                font-size: 1.8rem;
+            }
+            @media screen and (min-width: $width_mb) {
+                padding: 3rem;
+                h2 {
+                    font-size: $fontSize_h2;
+                }                
+            }
+        }
+    }
+    .spaceList {
+        margin-bottom: 30vh;
+        .spaceCard {
+            background-color: $white;
+            border-radius: $borderRadious_1;
+            border: 3px solid $color_4;
+            padding: 2.5rem;
+            margin-bottom: 5vh;
+            .title {
+                margin-bottom: 3vh;
+                h2 {
+                    margin-bottom: 1vh;
+                }
+            }
+            .description {
+                margin-bottom: 3vh;
+            }
+            .info {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+                div {
+                    width: 100%;
+                    h3 {
+                        font-size: 1.4rem;
+                        font-weight: bold;
+                        margin-bottom: 1vh;
+                    }
+                    .time {
+                        display: flex;
+                        p:nth-child(1) {
+                            padding-right: 2rem;
+                        }
+                    }
+                }
+                .button {
+                    margin-top: 3vh;
+                }
+            }
+            @media screen and (min-width: $width_mb) {
+                padding: 3rem;
+                .info {
+                    div {
+                        width: 50%;
+                    }
+                    .button {
+                        text-align: right;
+                    }
+                }
+              
+            }            
+        }
+    }
+    .createSpaceIcon {
+        position: fixed;
+        top: 48vh;
+        right: 5vw;
+        @media screen and (min-width: $width_mb) {  
+            right: 10vw; 
+        }
+        a {
+            text-decoration: none;
+            color: $color_3;
+            svg {
+                width: 3.5rem;
+            }
+        }
+        a:hover {
+            color: $color_1;
+        }
+    }
+    .footerCategoryForm {
+        background-color: $color_5;
+        position: fixed;
+        bottom: 10vh;
+        left: 0;
+        width: 100%;
+        padding-top: 3vh;
+        .fieldset {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            select {
+                width: 20rem;
+            }
+        }
+        
+    }
+}
+
+// ------ Dashboard
 

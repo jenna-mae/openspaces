@@ -89,7 +89,7 @@ include("snippets/headerLogo.php"); //snippets
                     </div>
                 </div>
                 <div class="fieldset submit">
-                    <input type="submit" value="Register Now" class="btn-1"/>
+                    <input type="submit" value="Submit" class="btn-1"/>
                 </div>
             </form>
             <div class="notice">

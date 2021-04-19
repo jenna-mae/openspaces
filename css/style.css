@@ -1,7 +1,3 @@
-#registerPage .handle, #loginPage .handle {
-  max-width: 900px;
-}
-
 #registerPage .headerLogo, #loginPage .headerLogo {
   margin-top: 6vh;
   margin-bottom: 7vh;
@@ -34,7 +30,11 @@
 }
 
 #registerPage .registerForm header, #loginPage .registerForm header {
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
+}
+
+#registerPage .registerForm header h1, #loginPage .registerForm header h1 {
+  margin-bottom: 3vh;
 }
 
 #registerPage .registerForm .notice span, #loginPage .registerForm .notice span {
@@ -53,5 +53,156 @@
 
 #registerPage .registerForm .notice a:hover, #loginPage .registerForm .notice a:hover {
   color: #1f4045;
+}
+
+#dashboard .createOwnSpace {
+  margin-bottom: 5vh;
+}
+
+#dashboard .createOwnSpace .container {
+  background-color: #1f4045;
+  text-align: center;
+  border-radius: 3rem;
+  padding: 2.5rem;
+}
+
+#dashboard .createOwnSpace .container h2 {
+  color: #ffffff;
+  margin-bottom: 3vh;
+  font-size: 1.8rem;
+}
+
+@media screen and (min-width: 480px) {
+  #dashboard .createOwnSpace .container {
+    padding: 3rem;
+  }
+  #dashboard .createOwnSpace .container h2 {
+    font-size: 2.4rem;
+  }
+}
+
+#dashboard .spaceList {
+  margin-bottom: 30vh;
+}
+
+#dashboard .spaceList .spaceCard {
+  background-color: #ffffff;
+  border-radius: 3rem;
+  border: 3px solid #c9c1b4;
+  padding: 2.5rem;
+  margin-bottom: 5vh;
+}
+
+#dashboard .spaceList .spaceCard .title {
+  margin-bottom: 3vh;
+}
+
+#dashboard .spaceList .spaceCard .title h2 {
+  margin-bottom: 1vh;
+}
+
+#dashboard .spaceList .spaceCard .description {
+  margin-bottom: 3vh;
+}
+
+#dashboard .spaceList .spaceCard .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#dashboard .spaceList .spaceCard .info div {
+  width: 100%;
+}
+
+#dashboard .spaceList .spaceCard .info div h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+
+#dashboard .spaceList .spaceCard .info div .time {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#dashboard .spaceList .spaceCard .info div .time p:nth-child(1) {
+  padding-right: 2rem;
+}
+
+#dashboard .spaceList .spaceCard .info .button {
+  margin-top: 3vh;
+}
+
+@media screen and (min-width: 480px) {
+  #dashboard .spaceList .spaceCard {
+    padding: 3rem;
+  }
+  #dashboard .spaceList .spaceCard .info div {
+    width: 50%;
+  }
+  #dashboard .spaceList .spaceCard .info .button {
+    text-align: right;
+  }
+}
+
+#dashboard .createSpaceIcon {
+  position: fixed;
+  top: 48vh;
+  right: 5vw;
+}
+
+@media screen and (min-width: 480px) {
+  #dashboard .createSpaceIcon {
+    right: 10vw;
+  }
+}
+
+#dashboard .createSpaceIcon a {
+  text-decoration: none;
+  color: #1f4045;
+}
+
+#dashboard .createSpaceIcon a svg {
+  width: 3.5rem;
+}
+
+#dashboard .createSpaceIcon a:hover {
+  color: #c09a85;
+}
+
+#dashboard .footerCategoryForm {
+  background-color: #f8f3f0;
+  position: fixed;
+  bottom: 10vh;
+  left: 0;
+  width: 100%;
+  padding-top: 3vh;
+}
+
+#dashboard .footerCategoryForm .fieldset {
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dashboard .footerCategoryForm .fieldset select {
+  width: 20rem;
 }
 /*# sourceMappingURL=style.css.map */

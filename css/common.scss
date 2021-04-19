@@ -24,34 +24,19 @@ h1, h2, h3, h4, h5 { font-family: $font_2; }
 
 h1 { 
     font-size: $fontSize_h1; 
-    margin-bottom: $marginBottom_h1;
     color: $color_3;
 }
 
-h2 { 
-    font-size: $fontSize_h2; 
-    margin-bottom: $marginBottom_h2;    
-}
-
-h3 { 
-    font-size: $fontSize_h3; 
-    margin-bottom: $marginBottom_h3;
-}
-
-h4 { 
-    font-size: $fontSize_h4; 
-    margin-bottom: $marginBottom_h4;
-}
-
-h5 { 
-    font-size: $fontSize_h5; 
-    margin-bottom: $marginBottom_h5;
-}
+h2 { font-size: $fontSize_h2; }
+h3 { font-size: $fontSize_h3; }
+h4 { font-size: $fontSize_h4; }
+h5 { font-size: $fontSize_h5; }
+p { line-height: 1.6rem;}
 
 .handle {
     width: 90%;
     margin: 0 auto;
-    max-width: 1800px;
+    max-width: 800px;
 }
 
 @media screen and (max-width: $width_mb) {  
@@ -83,7 +68,7 @@ h5 {
     display: inline-block;
     font-family: $font_2;
 	font-size: 1.1rem;
-    padding: 0.7rem 1.8rem;
+    padding: 0.9rem 2.6rem;
 	transition: $transition_hover; 
 }
 
@@ -209,8 +194,7 @@ form {
 }
 
 
-
-
+// Header for Login & Register page ------
 .headerLogo {
     margin-top: $margin_page;
     margin-bottom: 5vh;
@@ -226,7 +210,52 @@ form {
     }
 }
 
+// ------ Header for Login & Register page
 
+
+// Header Navigation Bar ------
+
+.headerNaviBar {
+    margin-top: $margin_page;
+    margin-bottom: 5vh;
+    .handle { 
+        display: flex;
+        align-items: center;
+        .naviIcons {
+            width: 50%;
+            display: flex;
+            a {
+                display: block;
+                text-decoration: none;
+                color: $color_3;
+                transition: $transition_hover;
+                margin-right: 1rem;
+                svg {
+                    width: 2rem;              
+                }
+                @media screen and (min-width: $width_mb) {  
+                    margin-right: 1.3rem;
+                    svg {
+                        width: 3rem;
+                    }                
+                }      
+            }
+            a:hover {
+                color: $color_1;
+            }
+        }
+        .logo {
+            width: 50%;
+            text-align: right;
+            img {
+                width: 15rem;
+            }
+        }
+    }
+}
+
+
+// ------ Header Navigation Bar
 
 // Sticky Navi Bar ------
 
@@ -234,28 +263,38 @@ html, body {
     min-height: 100vh;
 }
 
-.naviBar {
+.naviFooter {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: $color_1;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 1.5rem 0;
-    a {
-        display: block;
-        font-family: $font_2;
-        font-weight: 600;
-        text-decoration: none;
-        color: $color_3;
-        transition: $transition_hover;
-        svg {
-            width: 2rem;
+    background-color: $color_5;
+    height: 10vh;
+    .handle { 
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .copyright {
+            font-family: $font_2;
+            font-size: .9rem;
         }
-    }
-    a:hover {
-        color: $white;
+    
+        a {
+            font-family: $font_2;
+            font-weight: 600;
+            text-decoration: none;
+            color: $color_3;
+            transition: $transition_hover;
+            margin-left: 0.8rem;
+            svg {
+                width: 2rem;
+            }
+        }
+        a:hover {
+            color: $color_1;
+        }
     }
 }
 
