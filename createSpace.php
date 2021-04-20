@@ -12,47 +12,61 @@ include("snippets/headerNaviBar.php"); //snippets
 <section>
     <div class="handle">
         <header>
-            <h1>Create a New Space</h1>
+            <h1>Create a Space</h1>
             <!-- the title should be chenge to "Edit your space" when the page receives GET or POST id with PHP -->
         </header>
 
         <article>
-            <form id="form" method="post" action="save_space.php"><!-- Check the file name -->
+            <form id="form" method="post" action="#"><!-- Check the file name -->
                 <div class="fieldset required">
-                    <label>Space Name<span> *</span></label>
+                    <label>Name of Space<span> *</span></label>
                     <input type="text" name="spaceName" value=""/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
-                <div class="fieldset required">
+                <div class="fieldset required half">
                     <label>Category<span> *</span></label>
                     <select name="category">
                         <option value="">- Select -</option>
-                        <option value="Option 1">Option 1</option>
-                        <option value="Option 2">Option 2</option>
-                        <option value="Option 3">Option 3</option>
-                        <option value="Option 4">Option 4</option>
-                        <option value="Option 5">Option 5</option>
+                        <option value="Recently Added">Recently Added</option>
+                        <option value="Hangout">Hangout</option>
+                        <option value="Art">Art</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Books">Books</option>
+                        <option value="Games">Games</option>
+                        <option value="Ted Talk">Ted Talk</option>
+                        <option value="Other">Other</option>
                     </select>
                     <div class="errorMsg">
                         <p>Please select one.</p>
                     </div>
                 </div>
-                <div class="fieldset required">
-                    <label>Privacy Option<span> *</span></label>
-                    <div class="privacy">
-                        <div class="option">
-                            <input type="radio" name="privacyOption" value="Public"/>Public
-                        </div>
-                        <div class="option">
-                            <input type="radio" name="privacyOption" value="Private"/>Private
-                        </div>
-                    </div>
+                <div class="fieldset required half">
+                    <label>Date<span> *</span></label>
+                    <input type="date" name="date" value=""/>
                     <div class="errorMsg">
-                        <p>Please select one.</p>
+                        <p>This field is required.</p>
                     </div>
                 </div>
+                <div class="fieldset required half">
+                    <label>Start time<span> *</span></label>
+                    <input type="time" name="startTime" value=""/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
+                </div>  
+                <div class="fieldset half">
+                    <label>End time</label>
+                    <input type="time" name="endTime" value=""/>
+                </div>
+                <div class="fieldset required">
+                    <label>Meeting URL<span> *</span></label>
+                    <input type="url" name="meetingURL" value=""/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
+                </div>  
                 <div class="fieldset required">
                     <label>Description<span> *</span></label>
                     <textarea name="description"></textarea>
@@ -70,12 +84,12 @@ include("snippets/headerNaviBar.php"); //snippets
 </section>
 
 <script type="text/javascript" src="js/form_validator.js"></script>
-<!-- Create error indication with CSS later -->
-<script>
+
+<!-- <script>
     function checkSubmit() {
         return confirm("Create a space?");
     }
-</script>
+</script> -->
 
 
 

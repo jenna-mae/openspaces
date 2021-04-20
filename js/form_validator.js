@@ -9,8 +9,10 @@ const Validator = function (elementId) {
     validator.validateForm = function () {
         validator.requiredFields.forEach(function (fieldSet) {
 
-            let textField = fieldSet.querySelector("input[type='text'], input[type = 'email'], input[type = 'password'], select, textarea");
+            let textField = fieldSet.querySelector("input[type='text'], input[type = 'email'], input[type = 'password'], input[type='date'], input[type='time'], input[type='url'], select, textarea");
             //collect required fields except radio button fields
+
+            console.log(textField);
 
             let radioFields = fieldSet.querySelectorAll("input[type='radio']");
             //collect required radio button fields

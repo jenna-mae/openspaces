@@ -292,4 +292,8 @@
 #createSpace section {
   margin-top: 15vh;
 }
+
+#createSpace h1 {
+  margin-bottom: 5vh;
+}
 /*# sourceMappingURL=style.css.map */
