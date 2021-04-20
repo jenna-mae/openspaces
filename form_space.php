@@ -73,7 +73,7 @@ include("snippets/navLinks.php"); //snippets
 <!-- Create error indication with CSS later -->
 <script>
     function checkSubmit() {
-        return confirm("Submit the form?");
+        return confirm("Create a space?");
     }
 </script>
 

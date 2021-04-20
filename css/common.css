@@ -21,35 +21,34 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-  font-size: 2.6rem;
-  margin-bottom: 2.5vh;
+  font-size: 2.7rem;
   color: #1f4045;
 }
 
 h2 {
-  font-size: 2.2rem;
-  margin-bottom: 2vh;
+  font-size: 2.4rem;
 }
 
 h3 {
   font-size: 1.8rem;
-  margin-bottom: 2vh;
 }
 
 h4 {
   font-size: 1.5rem;
-  margin-bottom: 2vh;
 }
 
 h5 {
   font-size: 1.2rem;
-  margin-bottom: 2vh;
+}
+
+p {
+  line-height: 1.6rem;
 }
 
 .handle {
   width: 90%;
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 800px;
 }
 
 @media screen and (max-width: 480px) {
@@ -95,18 +94,28 @@ h5 {
   display: inline-block;
   font-family: "Quattrocento", serif;
   font-size: 1.1rem;
-  padding: 0.7rem 1.8rem;
-  color: #ffffff;
+  padding: 0.9rem 2.6rem;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
 
 .btn-1 {
+  color: #ffffff;
   background-color: #c09a85;
 }
 
 .btn-1:hover {
   background-color: #1f4045;
+}
+
+.btn-2 {
+  color: #1f4045;
+  background-color: #ffffff;
+}
+
+.btn-2:hover {
+  color: #ffffff;
+  background-color: #c9c1b4;
 }
 
 form label {
@@ -235,6 +244,142 @@ form .unmatched {
     width: 33.33%;
     margin-bottom: 0;
   }
+}
+
+.headerLogo {
+  margin-top: 6vh;
+  margin-bottom: 5vh;
+  text-align: center;
+}
+
+.headerLogo img {
+  width: 15rem;
+}
+
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+  .headerLogo img {
+    width: 22rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .headerLogo img {
+    width: 25rem;
+  }
+}
+
+.headerNaviBar {
+  margin-top: 6vh;
+  margin-bottom: 5vh;
+}
+
+.headerNaviBar .handle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerNaviBar .handle .naviIcons {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerNaviBar .handle .naviIcons a {
+  display: block;
+  text-decoration: none;
+  color: #1f4045;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  margin-right: 1rem;
+}
+
+.headerNaviBar .handle .naviIcons a svg {
+  width: 2rem;
+}
+
+@media screen and (min-width: 480px) {
+  .headerNaviBar .handle .naviIcons a {
+    margin-right: 1.3rem;
+  }
+  .headerNaviBar .handle .naviIcons a svg {
+    width: 3rem;
+  }
+}
+
+.headerNaviBar .handle .naviIcons a:hover {
+  color: #c09a85;
+}
+
+.headerNaviBar .handle .logo {
+  width: 50%;
+  text-align: right;
+}
+
+.headerNaviBar .handle .logo img {
+  width: 15rem;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+.naviFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f3f0;
+  height: 10vh;
+}
+
+.naviFooter .handle {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.naviFooter .handle .copyright {
+  font-family: "Quattrocento", serif;
+  font-size: .9rem;
+}
+
+.naviFooter .handle a {
+  font-family: "Quattrocento", serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #1f4045;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+  margin-left: 0.8rem;
+}
+
+.naviFooter .handle a svg {
+  width: 2rem;
+}
+
+.naviFooter .handle a:hover {
+  color: #c09a85;
 }
 
 .footer {

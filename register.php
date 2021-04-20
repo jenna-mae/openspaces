@@ -2,13 +2,8 @@
 $title = "Register Page"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "registerPage"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
+include("snippets/headerLogo.php"); //snippets
 ?>
-
-<header class="headerLogo">
-    <div class="handle">
-        <img src="imgs/OpenspacelogoColor.png" alt="Open space Logo"/>
-    </div>
-</header>
 
 <section class="registerForm">
     <div class="handle">
@@ -94,7 +89,7 @@ include("snippets/header.php"); //snippets
                     </div>
                 </div>
                 <div class="fieldset submit">
-                    <input type="submit" value="Register Now" class="btn-1"/>
+                    <input type="submit" value="Submit" class="btn-1"/>
                 </div>
             </form>
             <div class="notice">

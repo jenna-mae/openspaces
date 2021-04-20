@@ -1,16 +1,9 @@
 <?php
-// include("libs/functions.php"); //the file to connect to database and use the  php functions
-
 $title = "Login Page"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "loginPage"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
+include("snippets/headerLogo.php"); //snippets
 ?>
-
-<header class="headerLogo">
-    <div class="handle">
-        <img src="imgs/OpenspacelogoColor.png" alt="Open space Logo"/>
-    </div>
-</header>
 
 <section class="registerForm">
     <div class="handle">
@@ -41,7 +34,7 @@ include("snippets/header.php"); //snippets
                     <input type="password" name="password"/>
                 </div>
                 <div class="fieldset submit">
-                    <input type="submit" value="Login Now" class="btn-1"/>
+                    <input type="submit" value="Submit" class="btn-1"/>
                 </div>            
             </form>
             <div class="notice">
