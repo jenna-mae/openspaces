@@ -31,7 +31,7 @@ h2 { font-size: $fontSize_h2; }
 h3 { font-size: $fontSize_h3; }
 h4 { font-size: $fontSize_h4; }
 h5 { font-size: $fontSize_h5; }
-p { line-height: 1.6rem;}
+p { line-height: 1.8rem;}
 
 .handle {
     width: 90%;
@@ -216,8 +216,15 @@ form {
 // Header Navigation Bar ------
 
 .headerNaviBar {
-    margin-top: $margin_page;
-    margin-bottom: 5vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: $color_5;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     .handle { 
         display: flex;
         align-items: center;
@@ -229,14 +236,14 @@ form {
                 text-decoration: none;
                 color: $color_3;
                 transition: $transition_hover;
-                margin-right: 1rem;
+                margin-right: 1.2rem;
                 svg {
                     width: 2rem;              
                 }
                 @media screen and (min-width: $width_mb) {  
                     margin-right: 1.3rem;
                     svg {
-                        width: 3rem;
+                        width: 2.5rem;
                     }                
                 }      
             }
@@ -248,28 +255,19 @@ form {
             width: 50%;
             text-align: right;
             img {
-                width: 15rem;
+                width: 10rem;
             }
         }
     }
 }
 
-
 // ------ Header Navigation Bar
 
-// Sticky Navi Bar ------
-
-html, body {
-    min-height: 100vh;
-}
+// Footer Navi Bar ------
 
 .naviFooter {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: $color_5;
-    height: 10vh;
+    margin-top: 5vh;
+    margin-bottom: $margin_page;
     .handle { 
         height: 100%;
         display: flex;
@@ -279,8 +277,7 @@ html, body {
         .copyright {
             font-family: $font_2;
             font-size: .9rem;
-        }
-    
+        }    
         a {
             font-family: $font_2;
             font-weight: 600;
@@ -299,7 +296,7 @@ html, body {
 }
 
 
-// ------ Sticky Navi Bar
+// ------ Footer Navi Bar
 
 
 .footer {

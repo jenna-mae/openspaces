@@ -60,6 +60,63 @@
 // Dashboard ------
 
 #dashboard {
+    .categoryForm {
+        width: 100%;        
+        .fieldset {
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            select {
+                max-width: 20rem;
+            }
+        }        
+    }
+    .headerNaviBar {
+        height: 18vh;
+        .handle { 
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .naviIcons {
+                width: 50%;
+            }
+            .logo {
+                width: 50%;
+                text-align: right;
+                img {
+                    width: 10rem;
+                }
+            }
+            .categoryForm {
+                width: 100%;
+                margin-top: 2.5vh;
+            }            
+        }
+        @media screen and (min-width: $width_pc) {  
+            height: 10vh;
+            .handle { 
+                .naviIcons {
+                    width: 33.333%;
+                    order: 0;
+                }
+                .logo {
+                    width: 33.333%;
+                    order: 2;
+                }
+                .categoryForm {
+                    width: 33.333%;
+                    margin: 0;
+                    order: 1;
+                }   
+            }       
+        } 
+    }
+    section {
+        margin-top: 20vh;
+        @media screen and (min-width: $width_pc) {  
+            margin-top: 15vh;                
+        } 
+    }
     .createOwnSpace {
         margin-bottom: 5vh;
         .container {
@@ -81,7 +138,7 @@
         }
     }
     .spaceList {
-        margin-bottom: 30vh;
+        margin-bottom: 10vh;
         .spaceCard {
             background-color: $white;
             border-radius: $borderRadious_1;
@@ -90,8 +147,11 @@
             margin-bottom: 5vh;
             .title {
                 margin-bottom: 3vh;
-                h2 {
-                    margin-bottom: 1vh;
+                h3 {
+                    margin-bottom: 2vh;
+                }
+                p { 
+                    font-size: 1.2rem;
                 }
             }
             .description {
@@ -103,8 +163,7 @@
                 align-items: flex-end;
                 div {
                     width: 100%;
-                    h3 {
-                        font-size: 1.4rem;
+                    h4 {
                         font-weight: bold;
                         margin-bottom: 1vh;
                     }
@@ -140,7 +199,7 @@
     }
     .createSpaceIcon {
         position: fixed;
-        top: 48vh;
+        bottom: 20vh;
         right: 5vw;
         @media screen and (min-width: $width_mb) {  
             right: 10vw; 
@@ -149,31 +208,21 @@
             text-decoration: none;
             color: $color_3;
             svg {
-                width: 3.5rem;
+                width: 3rem;
             }
         }
         a:hover {
             color: $color_1;
         }
     }
-    .footerCategoryForm {
-        background-color: $color_5;
-        position: fixed;
-        bottom: 10vh;
-        left: 0;
-        width: 100%;
-        padding-top: 3vh;
-        .fieldset {
-            margin-bottom: 0;
-            display: flex;
-            justify-content: center;
-            select {
-                width: 20rem;
-            }
-        }
-        
-    }
 }
 
 // ------ Dashboard
+
+
+#createSpace {
+    section {
+        margin-top: 15vh;
+    }
+}
 
