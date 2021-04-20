@@ -144,14 +144,25 @@
   margin-top: 3vh;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 960px) {
   #dashboard .spaceList .spaceCard {
     padding: 3rem;
   }
-  #dashboard .spaceList .spaceCard .info div {
-    width: 50%;
+  #dashboard .spaceList .spaceCard .info .text {
+    width: 60%;
+  }
+  #dashboard .spaceList .spaceCard .info .text .time {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   #dashboard .spaceList .spaceCard .info .button {
+    width: 40%;
     text-align: right;
   }
 }

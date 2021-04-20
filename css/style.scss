@@ -116,20 +116,25 @@
                     }
                 }
                 .button {
-                    margin-top: 3vh;
+                    margin-top: 3vh;                    
                 }
             }
-            @media screen and (min-width: $width_mb) {
+            @media screen and (min-width: $width_pc) {
                 padding: 3rem;
                 .info {
-                    div {
-                        width: 50%;
+                    .text {
+                        width: 60%;
+                        .time {
+                           width: 100%;
+                           display: flex;
+                           flex-wrap: wrap;
+                        }
                     }
                     .button {
+                        width: 40%;
                         text-align: right;
                     }
-                }
-              
+                }              
             }            
         }
     }
