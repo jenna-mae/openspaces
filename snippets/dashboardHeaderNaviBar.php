@@ -12,10 +12,32 @@
             </a>
         </div>
 
+
         <div class="logo">
             <a href="#">
                 <img src="imgs/OpenspacelogoColor.png" alt="Open space Logo"/>
             </a>
         </div>
+
+
+        <div class="categoryForm">
+            <form action="dashboard.php" method="get" class="selectCategory">
+                <div class="fieldset">
+                    <select name="sortByCategory" id="sortByCategory">
+                        <option value="">- Sort by category -</option>
+                        <option value="Recently Added">Recently Added</option>
+                        <option value="Hangout">Hangout</option>
+                        <option value="Art">Art</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Books">Books</option>
+                        <option value="Games">Games</option>
+                        <option value="Ted Talk">Ted Talk</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </form>    
+        </div>
+
+
     </div>
 </nav>

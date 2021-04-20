@@ -1,11 +1,11 @@
 <?php
 // include("libs/functions.php"); //the file to connect to database and use the  php functions
 
-$title = "Space Form"; //The title name displayed in the browser tab. It's connected to "header.php"
-$bodyId = "spaceForm"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
+$title = "Create a New Space"; //The title name displayed in the browser tab. It's connected to "header.php"
+$bodyId = "createSpace"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
 
-include("snippets/navLinks.php"); //snippets
+include("snippets/headerNaviBar.php"); //snippets
 ?>
 
 
