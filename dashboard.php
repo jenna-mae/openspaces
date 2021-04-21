@@ -8,7 +8,9 @@ $loggedUser = $oUser->checkLogin(); // $loggedUser contains all user details fro
 $title = "Dashboard"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "dashboard"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
-include("snippets/dashboardHeaderNaviBar.php"); //snippets
+
+// include("snippets/dashboardHeaderNaviBar.php"); //show this snippets after Sort by category functiion is created
+include("snippets/headerNaviBar.php"); //snippets
 ?>
 
 <section class="page defaultPage">
@@ -17,7 +19,7 @@ include("snippets/dashboardHeaderNaviBar.php"); //snippets
         <article class="createOwnSpace">
             <div class="container">
                 <h2>Want to create your own Space?</h2>
-                <a href="form_space.php" class="btn-2">Let's get started</a> <!-- Check the file name -->
+                <a href="createSpace.php" class="btn-2">Let's get started</a> <!-- Check the file name -->
             </div>
         </article>
 
@@ -70,12 +72,12 @@ include("snippets/dashboardHeaderNaviBar.php"); //snippets
         </article>
         
         <article class="createSpaceIcon">
-            <a href="form_space.php">
+            <a href="createSpace.php">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-square" class="svg-inline--fa fa-pen-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9L102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1L314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"></path></svg>
             </a>
         </article>
 
-        <article class="categoryForm">
+        <!-- <article class="categoryForm">
             <form action="dashboard.php" method="get" class="selectCategory">
                 <div class="fieldset">
                     <select name="sortByCategory" id="sortByCategory">
@@ -91,7 +93,7 @@ include("snippets/dashboardHeaderNaviBar.php"); //snippets
                     </select>
                 </div>
             </form>    
-        </article>
+        </article> -->
 
     </div>
 </section>
