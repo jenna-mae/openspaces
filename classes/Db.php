@@ -23,7 +23,7 @@ class Db {
         return $getResult;
     }
     
-    public function getAllEntries($sql) {
+    static public function getAllEntries($sql) {
         $Db = new Db();
         $result = $Db->doQuery($sql);
         $data = array();

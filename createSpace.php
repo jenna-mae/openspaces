@@ -1,6 +1,9 @@
 <?php
 // include("libs/functions.php"); //the file to connect to database and use the  php functions
-
+session_start();
+include("classes/Db.php");
+include("classes/User.php");
+include("classes/Space.php");
 $title = "Create a New Space"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "createSpace"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
@@ -17,7 +20,7 @@ include("snippets/headerNaviBar.php"); //snippets
         </header>
 
         <article>
-            <form id="form" method="post" action="#"><!-- Check the file name -->
+            <form id="form" method="post" action="processSpace.php"><!-- Check the file name -->
                 <div class="fieldset required">
                     <label>Name of Space<span> *</span></label>
                     <input type="text" name="spaceName" value=""/>
@@ -29,14 +32,15 @@ include("snippets/headerNaviBar.php"); //snippets
                     <label>Category<span> *</span></label>
                     <select name="category">
                         <option value="">- Select -</option>
-                        <option value="Recently Added">Recently Added</option>
-                        <option value="Hangout">Hangout</option>
-                        <option value="Art">Art</option>
-                        <option value="Sports">Sports</option>
-                        <option value="Books">Books</option>
-                        <option value="Games">Games</option>
-                        <option value="Ted Talk">Ted Talk</option>
-                        <option value="Other">Other</option>
+                        <?php
+                            $oSpace = new Space;
+                            $options = $oSpace->dropDown("SELECT * FROM categories");
+                            foreach($options as $option){
+                        ?>
+                            <option value="<?=$option["id"]?>"><?=$option["name"]?></option>
+                        <?php
+                            }
+                        ?>
                     </select>
                     <div class="errorMsg">
                         <p>Please select one.</p>

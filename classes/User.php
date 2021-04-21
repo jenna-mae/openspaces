@@ -22,12 +22,12 @@ class User {
             $providedPass = $password;
             if(password_verify($providedPass, $encPass)) {
                 $_SESSION["id"] = $user["id"];
-                //header("location: dashboard.php");
+                header("location: dashboard.php");
             } else {
-                //header("location: index.php?error");
+                header("location: index.php?error");
             }
         } else {
-            //header("location: index.php?error");
+            header("location: index.php?error");
         }
     }
 
