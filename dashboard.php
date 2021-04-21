@@ -2,6 +2,7 @@
 session_start(); // start session for current user
 include("classes/Db.php"); // class contains database connection, query functions, etc
 include("classes/User.php"); // class contains functions to do with the User
+include("classes/Space.php");
 $oUser = new User(); // Create instance of User Object
 $loggedUser = $oUser->checkLogin(); // $loggedUser contains all user details from database(id, username, email, etc)
 
@@ -24,7 +25,35 @@ include("snippets/headerNaviBar.php"); //snippets
         </article>
 
         <article class="spaceList">
+            <?php
+                $oSpace = new Space;
+                $spaces = $oSpace->display("SELECT categories.name as categoryName, users.username, spaces.* FROM spaces LEFT JOIN categories on spaces.category = categories.id LEFT JOIN users on users.id = spaces.host");
+                foreach($spaces as $space) {
+            ?>
             <div class="spaceCard">
+                <div class="title">
+                    <h3><?=$space["name"]?></h3>
+                    <p><?=$space["category"]?></p>
+                </div>
+                <div class="description">
+                    <p><?=$space["link"]?></p>
+                    <p><?=$space["description"]?></p>
+                </div>
+                <div class="info">
+                    <div class="text">
+                        <h4>Hosted By: <?=$space["username"]?></h4>
+                        <p>Date: <?=$space["date"]?></p>                    
+                        <div class="time">
+                            <p>Start time: <?=date("g:i a", strtotime($space["startTime"]));?></p>
+                            <p>End time: <?=date("g:i a", strtotime($space["endTime"]));?></p>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="#" class="btn-1">Join Now</a>
+                    </div>                    
+                </div>
+            </div>
+            <!-- <div class="spaceCard">
                 <div class="title">
                     <h3>Lorem ipsum dolor sit</h3>
                     <p>Category: Lorem ipsum</p>
@@ -44,31 +73,11 @@ include("snippets/headerNaviBar.php"); //snippets
                     <div class="button">
                         <a href="#" class="btn-1">Join Now</a>
                     </div>                    
-                </div>
-            </div>
-
-            <div class="spaceCard">
-                <div class="title">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Category: Lorem ipsum</p>
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Amet volutpat consequat mauris nunc congue nisi vitae suscipit. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Vulputate sapien nec sagittis aliquam malesuada bibendum.</p>
-                </div>
-                <div class="info">
-                    <div class="text">
-                        <h4>Hosted By: Host's Name</h4>
-                        <p>Date: yyyy/mm/dd</p>                    
-                        <div class="time">
-                            <p>Start time: 00:00</p>
-                            <p>End time: 00:00</p>
-                        </div>
-                    </div>                    
-                    <div class="button">
-                        <a href="#" class="btn-1">Join Now</a>
-                    </div>                    
-                </div>
-            </div>
+                </div> 
+            </div>-->
+                <?php
+                    }
+                ?>
         </article>
         
         <article class="createSpaceIcon">

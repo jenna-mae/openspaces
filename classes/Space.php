@@ -17,6 +17,11 @@ class Space {
     private function recentlyAdded() {
         
     }
+
+    public function display($sql) {
+        $results = Db::getAllEntries($sql);
+        return $results;
+    }
 }
 
 ?>
