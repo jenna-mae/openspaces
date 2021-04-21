@@ -91,7 +91,7 @@ p { line-height: 1.8rem;}
 form {
     label {
         display: block;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.4rem;
     }
     span {
         color: $color_6;
@@ -103,7 +103,7 @@ form {
     input {
         vertical-align: middle;
     }
-    input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="time"], input[type="url"], select, textarea {
         display: block;
         width: 100%;
         border: none;
@@ -125,8 +125,8 @@ form {
     }
     textarea {
         line-height: 1.4rem;	
-        max-height: 15vh;
-        min-height: 15vh;
+        max-height: 30vh;
+        min-height: 30vh;
         max-width: 100%;
         min-width: 100%; 
     }
@@ -160,9 +160,21 @@ form {
         input[type="password"] {
             border: 2px solid $color_6;
         }
+        input[type="date"] {
+            border: 2px solid $color_6;
+        }
+        input[type="time"] {
+            border: 2px solid $color_6;
+        }
+        input[type="url"] {
+            border: 2px solid $color_6;
+        }
         select {
             border: 2px solid $color_6;
-        }        
+        }
+        textarea {
+            border: 2px solid $color_6;
+        }    
     }
     .errorMsg {
         display: none;
