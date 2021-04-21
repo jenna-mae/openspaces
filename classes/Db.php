@@ -10,20 +10,22 @@ class Db {
         return mysqli_connect($host, $username, $password, $database);
     }
     
-    public function doQuery($sql) {
-        $con = $this->connect();
-        $query = mysqli_query($con, $sql);
+    static public function doQuery($sql) {
+        $Db= new Db();
+        $query = mysqli_query($Db->connect(), $sql);
         return $query;
     }
     
     public function getSingleEntry($sql) {
-        $result = $this->doQuery($sql);
+        $Db = new Db();
+        $result = $Db->doQuery($sql);
         $getResult = mysqli_fetch_assoc($result);
         return $getResult;
     }
     
-    public function getAllEntries($sql) {
-        $result = $this->doQuery($sql);
+    static public function getAllEntries($sql) {
+        $Db = new Db();
+        $result = $Db->doQuery($sql);
         $data = array();
         while($getResult = mysqli_fetch_assoc($result)) {
             $data[] = $getResult;
