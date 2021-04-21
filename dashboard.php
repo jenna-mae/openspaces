@@ -8,7 +8,9 @@ $loggedUser = $oUser->checkLogin(); // $loggedUser contains all user details fro
 $title = "Dashboard"; //The title name displayed in the browser tab. It's connected to "header.php"
 $bodyId = "dashboard"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
-include("snippets/dashboardHeaderNaviBar.php"); //snippets
+
+// include("snippets/dashboardHeaderNaviBar.php"); //show this snippets after Sort by category functiion is created
+include("snippets/headerNaviBar.php"); //snippets
 ?>
 
 <section class="page defaultPage">
@@ -75,7 +77,7 @@ include("snippets/dashboardHeaderNaviBar.php"); //snippets
             </a>
         </article>
 
-        <article class="categoryForm">
+        <!-- <article class="categoryForm">
             <form action="dashboard.php" method="get" class="selectCategory">
                 <div class="fieldset">
                     <select name="sortByCategory" id="sortByCategory">
@@ -91,7 +93,7 @@ include("snippets/dashboardHeaderNaviBar.php"); //snippets
                     </select>
                 </div>
             </form>    
-        </article>
+        </article> -->
 
     </div>
 </section>

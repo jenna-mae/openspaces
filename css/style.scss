@@ -71,51 +71,58 @@
             }
         }        
     }
-    .headerNaviBar {
-        height: 18vh;
-        .handle { 
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            .naviIcons {
-                width: 50%;
-            }
-            .logo {
-                width: 50%;
-                text-align: right;
-                img {
-                    width: 10rem;
-                }
-            }
-            .categoryForm {
-                width: 100%;
-                margin-top: 2.5vh;
-            }            
-        }
-        @media screen and (min-width: $width_pc) {  
-            height: 10vh;
-            .handle { 
-                .naviIcons {
-                    width: 33.333%;
-                    order: 0;
-                }
-                .logo {
-                    width: 33.333%;
-                    order: 2;
-                }
-                .categoryForm {
-                    width: 33.333%;
-                    margin: 0;
-                    order: 1;
-                }   
-            }       
-        } 
-    }
+
+    // Show this after Sort by category functiion is created
+
+    // .headerNaviBar {
+    //     height: 18vh;
+    //     .handle { 
+    //         display: flex;
+    //         align-items: center;
+    //         flex-wrap: wrap;
+    //         .naviIcons {
+    //             width: 50%;
+    //         }
+    //         .logo {
+    //             width: 50%;
+    //             text-align: right;
+    //             img {
+    //                 width: 10rem;
+    //             }
+    //         }
+    //         .categoryForm {
+    //             width: 100%;
+    //             margin-top: 2.5vh;
+    //         }            
+    //     }
+    //     @media screen and (min-width: $width_pc) {  
+    //         height: 10vh;
+    //         .handle { 
+    //             .naviIcons {
+    //                 width: 33.333%;
+    //                 order: 0;
+    //             }
+    //             .logo {
+    //                 width: 33.333%;
+    //                 order: 2;
+    //             }
+    //             .categoryForm {
+    //                 width: 33.333%;
+    //                 margin: 0;
+    //                 order: 1;
+    //             }   
+    //         }       
+    //     } 
+    // }
+    // section {
+    //     margin-top: 20vh; 
+    //     @media screen and (min-width: $width_pc) {  
+    //         margin-top: 15vh;                
+    //     } 
+    // }
+
     section {
-        margin-top: 20vh;
-        @media screen and (min-width: $width_pc) {  
-            margin-top: 15vh;                
-        } 
+        margin-top: 15vh;
     }
     .createOwnSpace {
         margin-bottom: 5vh;

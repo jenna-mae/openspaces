@@ -92,7 +92,6 @@ include("snippets/headerNaviBar.php"); //snippets
 </script> -->
 
 
-
 <?php
-include("snippets/footer.php");
+include("snippets/naviFooter.php"); //snippets
 ?>
