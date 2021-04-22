@@ -1,5 +1,4 @@
 <?php
-// include("libs/functions.php"); //the file to connect to database and use the  php functions
 session_start();
 include("classes/Db.php");
 include("classes/User.php");
@@ -28,10 +27,7 @@ include("snippets/headerNaviBar.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>
-
-                <!-- Category field is hidden temporarily -->
-                
-                <!-- <div class="fieldset required half">
+                <div class="fieldset required half">
                     <label>Category<span> *</span></label>
                     <select name="category">
                         <option value="">- Select -</option>
@@ -48,8 +44,8 @@ include("snippets/headerNaviBar.php"); //snippets
                     <div class="errorMsg">
                         <p>Please select one.</p>
                     </div>
-                </div> -->
-                <div class="fieldset required">
+                </div>
+                <div class="fieldset required half">
                     <label>Date<span> *</span></label>
                     <input type="date" name="date" value=""/>
                     <div class="errorMsg">
@@ -94,13 +90,6 @@ include("snippets/headerNaviBar.php"); //snippets
 </section>
 
 <script type="text/javascript" src="js/form_validator.js"></script>
-
-<!-- <script>
-    function checkSubmit() {
-        return confirm("Create a space?");
-    }
-</script> -->
-
 
 <?php
 include("snippets/naviFooter.php"); //snippets
