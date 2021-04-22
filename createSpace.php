@@ -28,7 +28,10 @@ include("snippets/headerNaviBar.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>
-                <div class="fieldset required half">
+
+                <!-- Category field is hidden temporarily -->
+                
+                <!-- <div class="fieldset required half">
                     <label>Category<span> *</span></label>
                     <select name="category">
                         <option value="">- Select -</option>
@@ -45,8 +48,8 @@ include("snippets/headerNaviBar.php"); //snippets
                     <div class="errorMsg">
                         <p>Please select one.</p>
                     </div>
-                </div>
-                <div class="fieldset required half">
+                </div> -->
+                <div class="fieldset required">
                     <label>Date<span> *</span></label>
                     <input type="date" name="date" value=""/>
                     <div class="errorMsg">
@@ -60,9 +63,12 @@ include("snippets/headerNaviBar.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>  
-                <div class="fieldset half">
+                <div class="fieldset required half">
                     <label>End time</label>
                     <input type="time" name="endTime" value=""/>
+                    <div class="errorMsg">
+                        <p>This field is required.</p>
+                    </div>
                 </div>
                 <div class="fieldset required">
                     <label>Meeting URL<span> *</span></label>
