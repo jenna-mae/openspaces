@@ -12,8 +12,6 @@ const Validator = function (elementId) {
             let textField = fieldSet.querySelector("input[type='text'], input[type = 'email'], input[type = 'password'], input[type='date'], input[type='time'], input[type='url'], select, textarea");
             //collect required fields except radio button fields
 
-            console.log(textField);
-
             let radioFields = fieldSet.querySelectorAll("input[type='radio']");
             //collect required radio button fields
 
@@ -79,9 +77,7 @@ const Validator = function (elementId) {
 
         if (isError || isUnmatched) {
             e.preventDefault();
-        } else {
-            checkSubmit(); //checkSubmit function is written in each page file to show a spacific message
-        }
+        } 
     })
 }
 
