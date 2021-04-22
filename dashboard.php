@@ -54,28 +54,6 @@ include("snippets/headerNaviBar.php"); //snippets
                     </div>                    
                 </div>
             </div>
-            <!-- <div class="spaceCard">
-                <div class="title">
-                    <h3>Lorem ipsum dolor sit</h3>
-                    <p>Category: Lorem ipsum</p>
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Amet volutpat consequat mauris nunc congue nisi vitae suscipit. Turpis tincidunt id aliquet risus feugiat in ante metus dictum. Vulputate sapien nec sagittis aliquam malesuada bibendum.</p>
-                </div>
-                <div class="info">
-                    <div class="text">
-                        <h4>Hosted By: Host's Name</h4>
-                        <p>Date: yyyy/mm/dd</p>                    
-                        <div class="time">
-                            <p>Start time: 00:00</p>
-                            <p>End time: 00:00</p>
-                        </div>
-                    </div>
-                    <div class="button">
-                        <a href="#" class="btn-1">Join Now</a>
-                    </div>                    
-                </div> 
-            </div>-->
                 <?php
                     }
                 ?>
