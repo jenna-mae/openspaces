@@ -60,7 +60,7 @@ include("snippets/headerNaviBar.php"); //snippets
                     </div>
                 </div>  
                 <div class="fieldset required half">
-                    <label>End time</label>
+                    <label>End time<span> *</span></label>
                     <input type="time" name="endTime" value=""/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
