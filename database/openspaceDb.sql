@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Apr 22, 2021 at 03:14 AM
+-- Generation Time: Apr 22, 2021 at 10:17 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -47,7 +47,7 @@ CREATE TABLE `spaces` (
   `name` varchar(255) NOT NULL,
   `category` int(11) NOT NULL,
   `recentlyAdded` tinyint(1) NOT NULL DEFAULT '0',
-  `description` tinytext NOT NULL,
+  `description` text NOT NULL,
   `host` int(11) NOT NULL,
   `date` date NOT NULL,
   `startTime` time NOT NULL,
