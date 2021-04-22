@@ -44,6 +44,7 @@ include("snippets/headerNaviBar.php"); //snippets
                         <h4>Hosted By: <?=$space["username"]?></h4>
                         <p>Date: <?=$space["date"]?></p>                    
                         <div class="time">
+                        <!-- https://stackoverflow.com/questions/17098158/how-do-i-convert-date-time-from-24-hour-format-to-12-hour-am-pm/51515814 -->
                             <p>Start time: <?=date("g:i a", strtotime($space["startTime"]));?></p>
                             <p>End time: <?=date("g:i a", strtotime($space["endTime"]));?></p>
                         </div>
