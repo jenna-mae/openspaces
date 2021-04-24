@@ -202,7 +202,14 @@
 
 @media screen and (min-width: 480px) {
   #dashboard .createSpaceIcon {
+    bottom: 12vh;
     right: 10vw;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #dashboard .createSpaceIcon {
+    right: 20vw;
   }
 }
 
@@ -213,6 +220,12 @@
 
 #dashboard .createSpaceIcon a svg {
   width: 3rem;
+}
+
+@media screen and (min-width: 480px) {
+  #dashboard .createSpaceIcon a svg {
+    width: 4rem;
+  }
 }
 
 #dashboard .createSpaceIcon a:hover {
