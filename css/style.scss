@@ -209,13 +209,20 @@
         bottom: 20vh;
         right: 5vw;
         @media screen and (min-width: $width_mb) {  
+            bottom: 12vh;
             right: 10vw; 
+        }
+        @media screen and (min-width: 1300px) {  
+            right: 20vw; 
         }
         a {
             text-decoration: none;
             color: $color_3;
             svg {
                 width: 3rem;
+                @media screen and (min-width: $width_mb) {  
+                    width: 4rem; 
+                }
             }
         }
         a:hover {

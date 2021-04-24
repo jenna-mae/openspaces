@@ -49,9 +49,10 @@ include("snippets/headerNaviBar.php"); //snippets
                             <p>End time: <?=date("g:i a", strtotime($space["endTime"]));?></p>
                         </div>
                     </div>
-                    <div class="button">
+                    <!-- Join Now buton is hidden for now -->
+                    <!-- <div class="button">
                         <a href="#" class="btn-1">Join Now</a>
-                    </div>                    
+                    </div>                     -->
                 </div>
             </div>
                 <?php
