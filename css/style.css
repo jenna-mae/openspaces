@@ -239,4 +239,29 @@
 #createSpace h1 {
   margin-bottom: 5vh;
 }
+
+#profile section {
+  margin-top: 15vh;
+}
+
+#profile h1 {
+  margin-bottom: 8vh;
+}
+
+#profile form input {
+  background-color: #f8f3f0;
+  font-size: 1.5rem;
+}
+
+#profile form input:focus {
+  border: none;
+}
+
+#profile form .btn-1 {
+  background-color: #c09a85;
+}
+
+#profile form .btn-1:hover {
+  background-color: #1f4045;
+}
 /*# sourceMappingURL=style.css.map */

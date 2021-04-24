@@ -244,3 +244,28 @@
 
 }
 
+#profile {
+    section {
+        margin-top: 15vh;
+    }
+    h1 {
+        margin-bottom: 8vh;
+    }
+    form {
+        input {
+            background-color: $color_5;
+            font-size: 1.5rem;
+        }
+        input:focus {
+            border: none;
+        }
+        .btn-1 { 
+            background-color: $color_1; 
+        }
+        .btn-1:hover { 
+            background-color: $color_3; 
+        }
+    }
+
+}
+
