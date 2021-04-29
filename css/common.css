@@ -313,6 +313,7 @@ form .unmatched {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 1000px;
 }
 
 .headerNaviBar .handle .naviIcons {
@@ -321,6 +322,10 @@ form .unmatched {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .headerNaviBar .handle .naviIcons a {
@@ -329,7 +334,7 @@ form .unmatched {
   color: #1f4045;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
-  margin-right: 1.2rem;
+  margin-left: 1.2rem;
 }
 
 .headerNaviBar .handle .naviIcons a svg {
@@ -338,7 +343,7 @@ form .unmatched {
 
 @media screen and (min-width: 480px) {
   .headerNaviBar .handle .naviIcons a {
-    margin-right: 1.3rem;
+    margin-left: 1.3rem;
   }
   .headerNaviBar .handle .naviIcons a svg {
     width: 2.5rem;
@@ -351,7 +356,6 @@ form .unmatched {
 
 .headerNaviBar .handle .logo {
   width: 50%;
-  text-align: right;
 }
 
 .headerNaviBar .handle .logo img {

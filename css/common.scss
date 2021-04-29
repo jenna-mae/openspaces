@@ -240,20 +240,22 @@ form {
     .handle { 
         display: flex;
         align-items: center;
+        max-width: 1000px;
         .naviIcons {
             width: 50%;
             display: flex;
+            justify-content: flex-end;
             a {
                 display: block;
                 text-decoration: none;
                 color: $color_3;
                 transition: $transition_hover;
-                margin-right: 1.2rem;
+                margin-left: 1.2rem;
                 svg {
                     width: 2rem;              
                 }
                 @media screen and (min-width: $width_mb) {  
-                    margin-right: 1.3rem;
+                    margin-left: 1.3rem;
                     svg {
                         width: 2.5rem;
                     }                
@@ -265,7 +267,6 @@ form {
         }
         .logo {
             width: 50%;
-            text-align: right;
             img {
                 width: 10rem;
             }
