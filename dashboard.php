@@ -33,7 +33,7 @@ include("snippets/headerNaviBar.php"); //snippets
             <div class="spaceCard">
                 <div class="title">
                     <h3><?=$space["name"]?></h3>
-                    <p><?=$space["category"]?></p>
+                    <p><?=$space["categoryName"]?></p>
                 </div>
                 <div class="description">
                     <p><?=$space["link"]?></p>
