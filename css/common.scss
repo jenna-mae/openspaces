@@ -184,7 +184,7 @@ form {
     }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: $width_pc) {
     form {
         display: flex;
         flex-wrap: wrap;

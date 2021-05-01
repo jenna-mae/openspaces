@@ -257,6 +257,27 @@
     h1 {
         margin-bottom: 5vh;
     }
+    form {
+        .fieldset {
+            label {
+                font-size: 1.2rem;
+                font-weight: 500;
+                span {
+                    // display: none;
+                }
+            }
+            p { 
+                font-size: 0.8rem;
+                a {
+                    color: $color_3;
+                    font-weight: 500;
+                }
+                a:hover {
+                    color: $color_1;
+                }
+            }
+        }
+    }
 
 }
 
