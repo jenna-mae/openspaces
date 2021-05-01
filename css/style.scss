@@ -271,6 +271,7 @@
                 a {
                     color: $color_3;
                     font-weight: 500;
+                    transition: $transition_hover;
                 }
                 a:hover {
                     color: $color_1;

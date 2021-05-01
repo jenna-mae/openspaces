@@ -284,6 +284,8 @@
 #createSpace form .fieldset p a {
   color: #1f4045;
   font-weight: 500;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 }
 
 #createSpace form .fieldset p a:hover {
