@@ -233,7 +233,7 @@ form .unmatched {
   background-color: #ff6347;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 960px) {
   form {
     display: -webkit-box;
     display: -webkit-flex;
