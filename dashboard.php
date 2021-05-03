@@ -52,9 +52,9 @@ include("snippets/headerNaviBar.php"); //snippets
                         </div>
                     </div>
                     <!-- Join Now buton is hidden for now -->
-                    <!-- <div class="button">
-                        <a href="#" class="btn-1">Join Now</a>
-                    </div>                     -->
+                    <div class="button">
+                        <a href="<?=$space["link"]?>" class="btn-1">Join Now</a>
+                    </div>                    
                 </div>
             </div>
                 <?php

@@ -16,7 +16,7 @@ class Db {
         return $query;
     }
     
-    public function getSingleEntry($sql) {
+    static public function getSingleEntry($sql) {
         $Db = new Db();
         $result = $Db->doQuery($sql);
         $getResult = mysqli_fetch_assoc($result);
