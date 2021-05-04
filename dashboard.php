@@ -62,7 +62,7 @@ include("snippets/headerNaviBar.php"); //snippets
                             // This is where you can output html to show the button that is not active.
                             ?>
                                 <div class="button">
-                                    <a href="<?=$space["link"]?>" class="btn-inactive">Join Now</a>
+                                    <a href="<?=$space["link"]?>" class="btn-inactive">Coming Soon</a>
                                 </div>
                             <?php
                         }

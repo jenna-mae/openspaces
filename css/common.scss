@@ -68,7 +68,7 @@ p { line-height: 1.8rem;}
     display: inline-block;
     font-family: $font_2;
 	font-size: 1.1rem;
-    padding: 0.9rem 2.6rem;
+    padding: 1rem 2.5rem;
 	transition: $transition_hover; 
 }
 
@@ -89,7 +89,6 @@ p { line-height: 1.8rem;}
 }
 
 .btn-inactive { 
-    display: inline-block;
     color: $white;
     background-color: #9B9DA0;
     pointer-events: none;
