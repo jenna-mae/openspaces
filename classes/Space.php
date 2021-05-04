@@ -7,11 +7,12 @@ class Space {
         date_default_timezone_set('America/Vancouver');
         foreach($results as $result) {
             // && date("H:i a")>=$result["endTime"]
-            if(date("Y-m-d")>=$result["date"]) {
+            if(date("Y-m-d")>$result["date"]) {
                 Db::DoQuery("UPDATE spaces SET isactive = 0 WHERE id=".$result["id"]);
             } 
         }
     }
+    
     public function create($name, $category, $date, $description, $host, $startTime, $endTime, $link) {
         $space = Db::DoQuery("INSERT INTO spaces(name, category, date, description, host, startTime, endTime, link) VALUES ('".$name."', '".$category."','".$date."', '".$description."', '".$host."', '".$startTime."', '".$endTime."', '".$link."')");
         return $space;

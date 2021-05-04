@@ -29,7 +29,7 @@ include("snippets/headerNaviBar.php"); //snippets
         <article class="spaceList">
             <?php
                 $oSpace = new Space;
-                $spaces = $oSpace->display("SELECT categories.name as categoryName, users.username, spaces.* FROM spaces LEFT JOIN categories on spaces.category = categories.id LEFT JOIN users on users.id = spaces.host WHERE isactive=1 ORDER BY id DESC");
+                $spaces = $oSpace->display("SELECT categories.name as categoryName, users.username, spaces.* FROM spaces LEFT JOIN categories on spaces.category = categories.id LEFT JOIN users on users.id = spaces.host WHERE isactive=1 ORDER BY date ASC");
                 foreach($spaces as $space) {
             ?>
             <div class="spaceCard">
