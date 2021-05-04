@@ -29,7 +29,7 @@ include("snippets/headerNaviBar.php"); //snippets
         <article class="spaceList">
             <?php
                 $oSpace = new Space;
-                $spaces = $oSpace->display("SELECT categories.name as categoryName, users.username, spaces.* FROM spaces LEFT JOIN categories on spaces.category = categories.id LEFT JOIN users on users.id = spaces.host");
+                $spaces = $oSpace->display("SELECT categories.name as categoryName, users.username, spaces.* FROM spaces LEFT JOIN categories on spaces.category = categories.id LEFT JOIN users on users.id = spaces.host ORDER BY id DESC");
                 foreach($spaces as $space) {
             ?>
             <div class="spaceCard">
@@ -51,10 +51,18 @@ include("snippets/headerNaviBar.php"); //snippets
                             <p>End time: <?=date("g:i a", strtotime($space["endTime"]));?></p>
                         </div>
                     </div>
-                    <!-- Join Now buton is hidden for now -->
-                    <div class="button">
-                        <a href="<?=$space["link"]?>" class="btn-1">Join Now</a>
-                    </div>                    
+                    <?php
+                        // This is checking to see if the current time is within the time of the Space. Right now I have it as only showing the button when the timing is correct.
+                        if(Space::checkTime($space["date"], $space["startTime"], $space["endTime"])){
+                            ?>
+                                <div class="button">
+                                    <a href="<?=$space["link"]?>" class="btn-1">Join Now</a>
+                                </div>
+                            <?php
+                        } else {
+                            // This is where you can output html to show the button that is not active.
+                        }
+                    ?>                    
                 </div>
             </div>
                 <?php
