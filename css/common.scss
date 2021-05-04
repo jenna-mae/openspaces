@@ -88,6 +88,13 @@ p { line-height: 1.8rem;}
     background-color: $color_4;
 }
 
+.btn-inactive { 
+    display: inline-block;
+    color: $white;
+    background-color: #9B9DA0;
+    pointer-events: none;
+}
+
 form {
     label {
         display: block;
