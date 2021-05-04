@@ -11,14 +11,20 @@ class Space {
         $results = Db::getAllEntries($sql);
         return $results;
     }
-
-    private function recentlyAdded() {
-        
-    }
-
+    
     public function display($sql) {
         $results = Db::getAllEntries($sql);
         return $results;
+    }
+
+    static public function checkTime($date, $startTime, $endTime) {
+        $bIsActive = false;
+        date_default_timezone_set('America/Vancouver');
+        if(date("Y-m-d")==$date && date("H:i a")>=$startTime && date("H:i a")<=$endTime){
+            return $bIsActive = true;
+        } else {
+            return $bIsActive = false;
+        }
     }
 }
 
