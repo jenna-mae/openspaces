@@ -118,6 +118,13 @@ p {
   background-color: #c9c1b4;
 }
 
+.btn-inactive {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #9B9DA0;
+  pointer-events: none;
+}
+
 form label {
   display: block;
   margin-bottom: 0.4rem;
