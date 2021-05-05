@@ -209,41 +209,37 @@
         }
     }
     .createSpaceIcon {
-        position: fixed;
-        width: 100%;
-        left: 0;        
-        bottom: 15vh;
-        display: flex;
-        justify-content: center;
-        @media screen and (min-width: $width_mb) {  
-            bottom: 20vh;
-        }
-        .container {
-            width: 90vw;
-            max-width: 1000px;
-            display: flex;
-            justify-content: flex-end;
-            @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
-                width: 80vw;
-            }
-            @media screen and (min-width: $width_pc) {  
-                width: 90vw;
-            }            
-        }
         a {
             text-decoration: none;
             color: $color_3;
+            position: fixed;
+            bottom: 15vh;
+            right: 5vw;
             svg {
                 width: 3rem;
                 @media screen and (min-width: $width_mb) {  
                     width: 4rem; 
                 }
             }
+            @media only screen and (min-width: $width_mb) and (max-width: $width_pc) {  
+                right: 10vw; 
+            }
+            @media only screen and (min-width: $width_pc) and (max-width: 1439px) {  
+                right: 4vw; 
+            }
+            @media only screen and (min-width: 1440px) and (max-width: 1679px) {  
+                right: 15vw; 
+            }
+            @media only screen and (min-width: 1680px) and (max-width: 1919px) {  
+                right: 20vw; 
+            }
+            @media only screen and (min-width: 1920px) and (max-width: 2559px) {  
+                right: 25vw; 
+            }
+            @media screen and (min-width: 2560px) {  
+                right: 30vw; 
+            }
         }
-        a:hover {
-            color: $color_1;
-        }
-
     }
 }
 

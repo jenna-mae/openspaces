@@ -55,14 +55,14 @@ include("snippets/headerNaviBar.php"); //snippets
                         if(Space::checkTime($space["date"], $space["startTime"], $space["endTime"])){
                             ?>
                                 <div class="button">
-                                    <a href="<?=$space["link"]?>" class="btn-1">Join Now</a>
+                                    <a href="<?=$space["link"]?>" class="btn-1" target="_blank">Join Now</a>
                                 </div>
                             <?php
                         } else {
                             // This is where you can output html to show the button that is not active.
                             ?>
                                 <div class="button">
-                                    <a href="<?=$space["link"]?>" class="btn-inactive">Coming Soon</a>
+                                    <a href="#" class="btn-inactive">Coming Soon</a>
                                 </div>
                             <?php
                         }
@@ -75,11 +75,9 @@ include("snippets/headerNaviBar.php"); //snippets
         </article>
         
         <article class="createSpaceIcon">
-            <div class="container">
-                <a href="createSpace.php">
-                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-square" class="svg-inline--fa fa-pen-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9L102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1L314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"></path></svg>
-                </a>
-            </div>
+            <a href="createSpace.php">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-square" class="svg-inline--fa fa-pen-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9L102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1L314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"></path></svg>
+            </a>
         </article>
 
         <!-- <article class="categoryForm">

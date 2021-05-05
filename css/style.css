@@ -199,55 +199,12 @@
   }
 }
 
-#dashboard .createSpaceIcon {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  bottom: 15vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media screen and (min-width: 480px) {
-  #dashboard .createSpaceIcon {
-    bottom: 20vh;
-  }
-}
-
-#dashboard .createSpaceIcon .container {
-  width: 90vw;
-  max-width: 1000px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-@media only screen and (min-width: 480px) and (max-width: 960px) {
-  #dashboard .createSpaceIcon .container {
-    width: 80vw;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  #dashboard .createSpaceIcon .container {
-    width: 90vw;
-  }
-}
-
 #dashboard .createSpaceIcon a {
   text-decoration: none;
   color: #1f4045;
+  position: fixed;
+  bottom: 15vh;
+  right: 5vw;
 }
 
 #dashboard .createSpaceIcon a svg {
@@ -260,8 +217,40 @@
   }
 }
 
-#dashboard .createSpaceIcon a:hover {
-  color: #c09a85;
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+  #dashboard .createSpaceIcon a {
+    right: 10vw;
+  }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1439px) {
+  #dashboard .createSpaceIcon a {
+    right: 4vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 1679px) {
+  #dashboard .createSpaceIcon a {
+    right: 15vw;
+  }
+}
+
+@media only screen and (min-width: 1680px) and (max-width: 1919px) {
+  #dashboard .createSpaceIcon a {
+    right: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+  #dashboard .createSpaceIcon a {
+    right: 25vw;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  #dashboard .createSpaceIcon a {
+    right: 30vw;
+  }
 }
 
 #createSpace section {
