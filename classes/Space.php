@@ -2,14 +2,10 @@
 
 class Space {
     public function __construct() {
-        // For Now this only makes the Space go inactive after the date has passed. Next I will make it so it happens after the time has passed.
         $results = Db::getAllEntries("SELECT * FROM spaces");
         date_default_timezone_set('America/Vancouver');
         foreach($results as $result) {
-            // && date("H:i a")>=$result["endTime"]
-            if(date("Y-m-d")>$result["date"]) {
-                Db::DoQuery("UPDATE spaces SET isactive = 0 WHERE id=".$result["id"]);
-            } 
+            Space::checkTime($result["id"], $result["date"], $result["startTime"], $result["endTime"]);
         }
     }
     
@@ -28,13 +24,14 @@ class Space {
         return $results;
     }
 
-    static public function checkTime($date, $startTime, $endTime) {
-        $bIsActive = false;
+    static public function checkTime($id, $date, $startTime, $endTime) {
         date_default_timezone_set('America/Vancouver');
-        if(date("Y-m-d")==$date && date("H:i a")>=$startTime && date("H:i a")<=$endTime){
-            return $bIsActive = true;
+        if(date("Y-m-d") == $date && date("H:i a") >= $startTime && date("H:i a") <= $endTime){
+            Db::DoQuery("UPDATE spaces SET isactive = 2 WHERE id=".$id);
+        } else if(date("Y-m-d") > $date || date("Y-m-d") == $date && date("H:i a") > $endTime) {
+            Db::DoQuery("UPDATE spaces SET isactive = 0 WHERE id=".$id);
         } else {
-            return $bIsActive = false;
+            Db::DoQuery("UPDATE spaces SET isactive = 1 WHERE id=".$id);
         }
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 class Db {
-    public function connect() {
+    static public function connect() {
         $configArray = parse_ini_file("../../openspacesdb.ini");
         $host = $configArray['host'];
         $username = $configArray['username'];

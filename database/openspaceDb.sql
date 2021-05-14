@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: May 04, 2021 at 04:40 AM
+-- Generation Time: May 14, 2021 at 05:46 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -65,9 +65,16 @@ INSERT INTO `spaces` (`id`, `name`, `category`, `recentlyAdded`, `description`, 
 (4, 'Just Cause', 1, 0, 'We\'re just here to hangout! Just bring yourself and get ready to meet new people!', 15, '2021-04-21', '20:42:00', '22:42:00', 'https://meet.google.com/byg-tzkg-amu', 0),
 (5, 'Quiz Games', 5, 0, 'Join this group if you want to play some games and have fun!', 15, '2021-04-30', '17:57:00', '20:54:00', 'https://meet.google.com/byg-tzkg-amu', 0),
 (6, 'Sample', 1, 0, 'asdawe', 15, '2021-05-03', '18:46:00', '20:47:00', 'https://www.freshprep.ca/menu/this-week', 0),
-(7, 'Drinks & Paint Night!', 2, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-05', '12:33:00', '14:33:00', 'https://meet.google.com/byg-tzkg-amu', 1),
-(8, 'Random Hangout', 1, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-04', '08:33:00', '21:34:00', 'https://meet.google.com/byg-tzkg-amu', 1),
-(9, 'Games & Fun', 5, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-05', '09:34:00', '12:34:00', 'https://meet.google.com/byg-tzkg-amu', 1);
+(7, 'Drinks & Paint Night!', 2, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-05', '12:33:00', '14:33:00', 'https://meet.google.com/byg-tzkg-amu', 0),
+(8, 'Random Hangout', 1, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-04', '08:33:00', '21:34:00', 'https://meet.google.com/byg-tzkg-amu', 0),
+(9, 'Games & Fun', 5, 0, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,', 15, '2021-05-05', '09:34:00', '12:34:00', 'https://meet.google.com/byg-tzkg-amu', 0),
+(10, 'Drinks & Paint Night!', 2, 0, 'qwr', 15, '2021-05-14', '06:39:00', '09:39:00', 'https://www.freshprep.ca/menu/this-week', 0),
+(11, 'test1', 1, 0, 'afe', 15, '2021-05-14', '02:40:00', '12:50:00', 'https://zoom.us/', 2),
+(12, 'Random Hangout', 1, 0, 'sdv', 15, '2021-05-14', '08:40:00', '10:40:00', 'https://zoom.us/', 0),
+(13, 'test2', 4, 0, 'fbcd', 15, '2021-05-14', '16:41:00', '19:41:00', 'https://zoom.us/', 1),
+(14, 'Random Hangout44', 5, 0, 'wefewqr', 15, '2021-05-14', '22:21:00', '23:21:00', 'https://zoom.us/', 1),
+(15, 'Card Games', 5, 0, 'sample space', 15, '2021-05-14', '10:45:00', '22:45:00', 'https://zoom.us/', 2),
+(16, 'Movies', 1, 0, 'sample space', 15, '2021-05-15', '10:46:00', '15:46:00', 'https://zoom.us/', 1);
 
 -- --------------------------------------------------------
 
@@ -132,7 +139,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `spaces`
 --
 ALTER TABLE `spaces`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
