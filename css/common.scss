@@ -14,6 +14,14 @@ html {
 
 body { 
     background-color: $color_5;
+    display: flex; // for sticky footer
+    flex-direction: column; // for sticky footer
+    min-height: 100vh; // for sticky footer
+}
+
+section { // for sticky footer
+    margin-bottom: auto;
+    height: 100%;
 }
 
 img {
@@ -194,11 +202,9 @@ form {
     form {
         display: flex;
         flex-wrap: wrap;
-        .fieldset {
-            padding: 0 0.5vw;
-        }
+        justify-content: space-between;
         .half {
-            width: 50%;
+            width: 48.5%;
         }
         .radioOptions {
             display: flex;
@@ -284,7 +290,9 @@ form {
 
 // Footer Navi Bar ------
 
+
 .naviFooter {
+    width: 100%; // for sticky footer
     margin-top: 5vh;
     margin-bottom: $margin_page;
     .handle { 

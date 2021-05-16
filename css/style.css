@@ -258,7 +258,7 @@
 }
 
 #createSpace h1 {
-  margin-bottom: 5vh;
+  margin-bottom: 8vh;
 }
 
 #createSpace form .fieldset label {
@@ -279,5 +279,40 @@
 
 #createSpace form .fieldset p a:hover {
   color: #c09a85;
+}
+
+#accountInfo section {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+
+#accountInfo header {
+  margin-bottom: 10vh;
+}
+
+#accountInfo header h1 {
+  margin-bottom: 2vh;
+}
+
+#accountInfo form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#accountInfo form input[type="text"], #accountInfo form input[type="email"], #accountInfo form input[type="password"], #accountInfo form input[type="date"], #accountInfo form select {
+  background-color: #f8f3f0;
+  padding-left: 0;
+}
+
+#accountInfo form input:focus {
+  border: none;
+}
+
+#accountInfo form .btn-1 {
+  background-color: #c09a85;
+}
+
+#accountInfo form .btn-1:hover {
+  background-color: #1f4045;
 }
 /*# sourceMappingURL=style.css.map */
