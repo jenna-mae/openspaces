@@ -315,4 +315,17 @@
 #accountInfo form .btn-1:hover {
   background-color: #1f4045;
 }
+
+#editAccountInfo section {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+
+#editAccountInfo header {
+  margin-bottom: 10vh;
+}
+
+#editAccountInfo header h1 {
+  margin-bottom: 2vh;
+}
 /*# sourceMappingURL=style.css.map */

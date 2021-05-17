@@ -16,12 +16,11 @@ include("snippets/headerNaviBar.php"); //snippets
     <div class="handle">
         <header>
             <h1>Account Information</h1>
-            <!-- Show this p text after creating Edit button and function. -->
-            <!-- <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to uodate your persona information. Once you've finished, click save and you're done!</p> -->
+            <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to uodate your persona information. Once you've finished, click save and you're done!</p>
         </header>
 
         <article>
-            <form id="form" method="post" action="#"> <!-- Check the file name -->
+            <form id="form" method="post" action="editAccountInfo.php"> <!-- Check the file name -->
                 <div class="fieldset required">
                     <label>Email Address:</label>
                     <input type="email" name="email" id="email" value="<?=$loggedUser["email"]?>" readonly />
@@ -48,12 +47,12 @@ include("snippets/headerNaviBar.php"); //snippets
                 </div>
                 <div class="fieldset required half">
                     <label>Gender:</label>
-                    <input type="text" name="<?=$loggedUser["gender"]?>" id="gender" value 
-                    ="Male" readonly/>
+                    <input type="text" name="gender" id="gender" value 
+                    ="<?=$loggedUser["gender"]?>" readonly/>
                 </div>
-                <!-- <div class="fieldset submit">
+                <div class="fieldset submit">
                     <input type="submit" value="Edit" class="btn-1"/>
-                </div> -->
+                </div>
             </form>       
         </article>
     </div>
