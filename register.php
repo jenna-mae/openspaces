@@ -3,6 +3,8 @@ $title = "Register Page"; //The title name displayed in the browser tab. It's co
 $bodyId = "registerPage"; //The ID name given to the html body of each page for CSS. It's connected to "header.php"
 include("snippets/header.php"); //snippets
 include("snippets/headerLogo.php"); //snippets
+include("classes/Db.php");
+include("classes/User.php");
 ?>
 
 <section class="registerForm">
@@ -77,12 +79,15 @@ include("snippets/headerLogo.php"); //snippets
                 </div>
                 <div class="fieldset required half">
                     <label>Gender:</label>
-                        <select name="gender" id="gender">
+                    <select name="gender" id="gender">
                         <option value="">- Select -</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Non-Binary">Non-Binary</option>
-                        <option value="Other">Other</option>
+                        <?php
+                        foreach(User::getGenders() as $gender) {
+                        ?>
+                        <option value="<?=$gender["id"]?>"><?=$gender["name"]?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                     <div class="errorMsg">
                         <p>Please select one.</p>
