@@ -24,19 +24,19 @@ include("snippets/headerNaviBar.php"); //snippets
             <form id="form" method="post" action="#"> <!-- Check the file name -->
                 <div class="fieldset required">
                     <label>Email Address:</label>
-                    <input type="email" name="email" id="email" value="user@xx.com" readonly />
+                    <input type="email" name="email" id="email" value="<?=$loggedUser["email"]?>" readonly />
                 </div>
                 <div class="fieldset required half">
                     <label>First Name:</label>
-                    <input type="text" name="firstName" id="firstName" value="John" readonly />
+                    <input type="text" name="firstName" id="firstName" value="<?=$loggedUser["firstName"]?>" readonly />
                 </div>
                 <div class="fieldset required half">
                     <label>Last Name:</label>
-                    <input type="text" name="lastName" id="lastName" value="Smith" readonly />
+                    <input type="text" name="lastName" id="lastName" value="<?=$loggedUser["lastName"]?>" readonly />
                 </div>
                 <div class="fieldset required half">
                     <label>Username:</label>
-                    <input type="text" name="username" id="username" value="user" readonly />
+                    <input type="text" name="username" id="username" value="<?=$loggedUser["username"]?>" readonly />
                 </div>
                 <div class="fieldset required half">
                     <label>Password:</label>
@@ -44,11 +44,11 @@ include("snippets/headerNaviBar.php"); //snippets
                 </div>
                 <div class="fieldset required half">
                     <label>Birthday (YYYY/MM/DD):</label>
-                    <input type="text" name="birthday" id="birthday" value="2000/10/10" readonly />
+                    <input type="text" name="birthday" id="birthday" value="<?=$loggedUser["birthday"]?>" readonly />
                 </div>
                 <div class="fieldset required half">
                     <label>Gender:</label>
-                    <input type="text" name="gender" id="gender" value 
+                    <input type="text" name="<?=$loggedUser["gender"]?>" id="gender" value 
                     ="Male" readonly/>
                 </div>
                 <!-- <div class="fieldset submit">
