@@ -245,22 +245,21 @@
 
 // ------ Dashboard
 
-
 #createSpace {
     section {
         margin-top: 15vh;
     }
     h1 {
-        margin-bottom: 5vh;
+        margin-bottom: 8vh;
     }
     form {
         .fieldset {
             label {
                 font-size: 1.2rem;
                 font-weight: 500;
-                span {
-                    // display: none;
-                }
+                // span {
+                //     display: none;
+                // }
             }
             p { 
                 font-size: 0.8rem;
@@ -278,3 +277,34 @@
 
 }
 
+#accountInfo {
+    section {
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+    header {
+        margin-bottom: 10vh;
+        h1 {
+            margin-bottom: 2vh;
+        }
+    }
+    form {  
+        label {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }      
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], select {
+            background-color: $color_5;
+            padding-left: 0;
+        }
+        input:focus {
+            border: none;
+        }
+        .btn-1 { 
+            background-color: $color_1; 
+        }
+        .btn-1:hover { 
+            background-color: $color_3; 
+        }
+    }
+}

@@ -10,6 +10,21 @@ html {
 
 body {
   background-color: #f8f3f0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  margin-bottom: auto;
+  height: 100%;
 }
 
 img {
@@ -248,12 +263,13 @@ form .unmatched {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-  }
-  form .fieldset {
-    padding: 0 0.5vw;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   form .half {
-    width: 50%;
+    width: 48.5%;
   }
   form .radioOptions {
     display: -webkit-box;
@@ -369,6 +385,7 @@ form .unmatched {
 }
 
 .naviFooter {
+  width: 100%;
   margin-top: 5vh;
   margin-bottom: 6vh;
 }
