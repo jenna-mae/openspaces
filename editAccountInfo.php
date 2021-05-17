@@ -105,5 +105,5 @@ include("snippets/headerNaviBar.php"); //snippets
 <script type="text/javascript" src="js/form_validator.js"></script>
 
 <?php
-include("snippets/footer.php");
+include("snippets/naviFooter.php"); //snippets
 ?>
