@@ -17,7 +17,7 @@ include("snippets/headerNaviBar.php"); //snippets
     <div class="handle">
         <header>
             <h1>Account Information</h1>
-            <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to uodate your persona information. Once you've finished, click save and you're done!</p>
+            <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to update your personal information. Once you've finished, click save and you're done!</p>
         </header>
 
         <article>
@@ -34,14 +34,15 @@ include("snippets/headerNaviBar.php"); //snippets
                     <label>Last Name:</label>
                     <input type="text" name="lastName" id="lastName" value="<?=$loggedUser["lastName"]?>" readonly />
                 </div>
-                <div class="fieldset required half">
+                <div class="fieldset required">
                     <label>Username:</label>
                     <input type="text" name="username" id="username" value="<?=$loggedUser["username"]?>" readonly />
                 </div>
-                <div class="fieldset required half">
+                <!-- Password is commented out for now. -->
+                <!-- <div class="fieldset required half">
                     <label>Password:</label>
                     <input type="password" name="password" id="password" value="12345678" readonly />
-                </div>
+                </div> -->
                 <div class="fieldset required half">
                     <label>Birthday (YYYY/MM/DD):</label>
                     <input type="text" name="birthday" id="birthday" value="<?=$loggedUser["birthday"]?>" readonly />
