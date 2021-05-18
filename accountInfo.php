@@ -17,7 +17,7 @@ include("snippets/headerNaviBar.php"); //snippets
     <div class="handle">
         <header>
             <h1>Account Information</h1>
-            <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to uodate your persona information. Once you've finished, click save and you're done!</p>
+            <p>Something doesn't seem right? No worries! Scroll down to the bottom of the page and click edit to update your personal information. Once you've finished, click save and you're done!</p>
         </header>
 
         <article>
