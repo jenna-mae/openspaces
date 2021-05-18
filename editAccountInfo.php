@@ -31,7 +31,7 @@ include("snippets/headerNaviBar.php"); //snippets
         ?>
 
         <article>
-            <form id="form" method="post" action="#"> <!-- Check the file name -->
+            <form id="form" method="post" action="processEditAccount.php"> <!-- Check the file name -->
                 <div class="fieldset required">
                     <label>Email Address:</label>
                     <input type="email" name="email" id="email" value="<?=$loggedUser["email"]?>"/>
@@ -62,14 +62,14 @@ include("snippets/headerNaviBar.php"); //snippets
                 </div>
                 <div class="fieldset required half">
                     <label>Password:</label>
-                    <input type="password" name="password" id="password" value="<?=$loggedUser["password"]?>"/>
+                    <input type="password" name="password" id="password" value="123" readonly/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
                 </div>
                 <div class="fieldset required half">
                     <label>Confirm Password:</label>
-                    <input type="password" name="confirmPassword" id="confirmPassword" value="<?=$loggedUser["password"]?>"/>
+                    <input type="password" name="confirmPassword" id="confirmPassword" value="123" readonly/>
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
@@ -85,10 +85,13 @@ include("snippets/headerNaviBar.php"); //snippets
                     <label>Gender:</label>
                         <select name="gender" id="gender">
                         <option value="">- Select -</option>
-                        <option value="Male"<?= $loggedUser['gender'] != 'Male' ?: 'selected' ?>>Male</option>
-                        <option value="Female"<?= $loggedUser['gender'] != 'Female' ?: 'selected' ?>>Female</option>
-                        <option value="Non-Binary"<?= $loggedUser['gender'] != 'Non-Binary' ?: 'selected' ?>>Non-Binary</option>
-                        <option value="Other"<?= $loggedUser['gender'] != 'Other' ?: 'selected' ?>>Other</option>
+                        <?php
+                        foreach(User::getGenders() as $gender) {
+                        ?>
+                        <option value="<?=$gender["id"]?>" <?=$loggedUser['gendersId']!= $gender["id"] ?: 'selected'?>><?=$gender["name"]?></option>
+                        <?php
+                        }
+                        ?>
                     </select>
                     <div class="errorMsg">
                         <p>Please select one.</p>
