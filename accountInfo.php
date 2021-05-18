@@ -34,14 +34,15 @@ include("snippets/headerNaviBar.php"); //snippets
                     <label>Last Name:</label>
                     <input type="text" name="lastName" id="lastName" value="<?=$loggedUser["lastName"]?>" readonly />
                 </div>
-                <div class="fieldset required half">
+                <div class="fieldset required">
                     <label>Username:</label>
                     <input type="text" name="username" id="username" value="<?=$loggedUser["username"]?>" readonly />
                 </div>
-                <div class="fieldset required half">
+                <!-- Password is commented out for now. -->
+                <!-- <div class="fieldset required half">
                     <label>Password:</label>
                     <input type="password" name="password" id="password" value="12345678" readonly />
-                </div>
+                </div> -->
                 <div class="fieldset required half">
                     <label>Birthday (YYYY/MM/DD):</label>
                     <input type="text" name="birthday" id="birthday" value="<?=$loggedUser["birthday"]?>" readonly />

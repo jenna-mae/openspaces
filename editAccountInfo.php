@@ -60,7 +60,8 @@ include("snippets/headerNaviBar.php"); //snippets
                         <p>This field is required.</p>
                     </div>
                 </div>
-                <div class="fieldset required half">
+                <!-- Password fields are commented out for now. -->
+                <!-- <div class="fieldset required half">
                     <label>Password:</label>
                     <input type="password" name="password" id="password" value="123" readonly/>
                     <div class="errorMsg">
@@ -73,7 +74,7 @@ include("snippets/headerNaviBar.php"); //snippets
                     <div class="errorMsg">
                         <p>This field is required.</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="fieldset required half">
                     <label>Birthday (YYYY/MM/DD):</label>
                     <input type="text" name="birthday" id="birthday" value="<?=$loggedUser["birthday"]?>"/>

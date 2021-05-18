@@ -328,4 +328,12 @@
 #editAccountInfo header h1 {
   margin-bottom: 2vh;
 }
+
+#editAccountInfo .loginErrorMsg {
+  margin-bottom: 5vh;
+  color: #ff6347;
+  font-family: "Quattrocento", serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */
