@@ -1,8 +1,8 @@
 <?php
 
 class User {
-    static public function edit($id, $email, $firstName, $lastName, $username, $encPass, $birthday, $gender) {
-        Db::doQuery("UPDATE users SET email='".$email."', firstName='".$firstName."', lastName='".$lastName."', username='".$username."', password='".$encPass."', birthday='".$birthday."', gendersId='".$gender."' WHERE id='".$id."'");
+    static public function edit($id, $email, $firstName, $lastName, $username, $birthday, $gender) {
+        Db::doQuery("UPDATE users SET email='".$email."', firstName='".$firstName."', lastName='".$lastName."', username='".$username."', birthday='".$birthday."', gendersId='".$gender."' WHERE id='".$id."'");
         header("location: accountInfo.php");
     }
 
