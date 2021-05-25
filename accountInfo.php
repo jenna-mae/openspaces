@@ -8,7 +8,6 @@ $bodyId = "accountInfo"; //The ID name given to the html body of each page for C
 
 $oUser = new User();
 $loggedUser = $oUser->checkLogin();
-print_r($loggedUser);
 include("snippets/header.php"); //snippets
 include("snippets/headerNaviBar.php"); //snippets
 ?>

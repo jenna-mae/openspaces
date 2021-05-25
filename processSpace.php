@@ -15,8 +15,7 @@ $endTime = $_POST["endTime"];
 $description = $_POST["description"];
 $link = $_POST["meetingURL"];
 
-$oSpace = new Space;
-$createSpace = $oSpace->create($name, $category, $date, $description, $host, $startTime, $endTime, $link);
+Space::create($name, $category, $date, $description, $host, $startTime, $endTime, $link);
 
 header("location: dashboard.php?success")
 

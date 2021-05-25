@@ -9,8 +9,8 @@ class Space {
         }
     }
     
-    public function create($name, $category, $date, $description, $host, $startTime, $endTime, $link) {
-        $space = Db::DoQuery("INSERT INTO spaces(name, category, date, description, host, startTime, endTime, link) VALUES ('".$name."', '".$category."','".$date."', '".$description."', '".$host."', '".$startTime."', '".$endTime."', '".$link."')");
+    static public function create($name, $category, $date, $description, $host, $startTime, $endTime, $link) {
+        $space = Db::DoQuery("INSERT INTO spaces(name, category, date, description, host, startTime, endTime, link) VALUES ('".mysqli_real_escape_string(Db::connect(), $name)."', '".$category."','".$date."', '".mysqli_real_escape_string(Db::connect(), $description)."', '".$host."', '".$startTime."', '".$endTime."', '".$link."')");
         return $space;
     }
 
