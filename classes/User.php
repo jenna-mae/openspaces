@@ -8,8 +8,7 @@ class User {
 
     static public function register($email, $firstName, $lastName, $username, $encPass, $birthday, $gender) {
         Db::doQuery("INSERT INTO users (email, firstName, lastName, username, password, birthday, gendersId) VALUES ('".$email."', '".$firstName."', '".$lastName."', '".$username."', '".$encPass."', '".$birthday."', '".$gender."')");
-        $user = Db::getSingleEntry("SELECT * FROM users WHERE username='".$username."'");
-        echo"INSERT INTO users (email, firstName, lastName, username, password, birthday, gendersId) VALUES ('".$email."', '".$firstName."', '".$lastName."', '".$username."', '".$encPass."', '".$birthday."', '".$gender."')";
+        $user = Db::getSingleEntry("SELECT * FROM users WHERE username='".mysqli_real_escape_string(Db::connect(), $username)."'");
         if($user) {
             $_SESSION["id"] = $user["id"];
             header("location: dashboard.php");
@@ -19,9 +18,8 @@ class User {
     }
 
     static public function login($username, $password) {
-        $user = Db::getSingleEntry("SELECT * FROM users WHERE username='".$username."'");
+        $user = Db::getSingleEntry("SELECT * FROM users WHERE username='".mysqli_real_escape_string(Db::connect(), $username)."'");
         if($user) {
-            echo "good to go";
             $encPass = $user["password"];
             $providedPass = $password;
             if(password_verify($providedPass, $encPass)) {
