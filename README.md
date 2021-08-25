@@ -13,5 +13,9 @@ PHP, JavaScript, HTML5, CSS3, SASS, MySQL
 ## Screenshots
 <img src="imgs/register.png" width="300"> <img src="imgs/home.png" width="300"> <img src="imgs/create.png" width="300">
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## Contribors
+[Jenna Emerman](https://github.com/jenna-mae)
+[Amy Karpiak](https://github.com/amykarpiak)
+[Sachin Chaves](https://github.com/sachinchaves)
+[Azusa Zusak](https://github.com/azusazusak)
+* Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
