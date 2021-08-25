@@ -11,7 +11,7 @@ A group project using Agile and SCRUM. JIRA and Trello were used to organize the
 PHP, JavaScript, HTML5, CSS3, SASS, MySQL
 
 ## Screenshots
-<img src="imgs/shop.png" width="350">
+<img src="imgs/register.png" width="300"> <img src="imgs/home.png" width="300"> <img src="imgs/create.png" width="300">
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
